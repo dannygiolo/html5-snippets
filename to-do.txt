@@ -1,4 +1,3 @@
-- <html> snippet (different type based on project);
 - header
 - footer
 - nav (base, complex, dropdown, multi dropdown, breadcrumbs, navigation);
