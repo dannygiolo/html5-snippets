@@ -1,0 +1,198 @@
+/*  ======================================================
+	
+		Table of content
+
+			* Colors
+				- Body
+				- Home team
+				- Away team
+
+			* Starter 
+				- Normalize
+				
+			* Typography
+
+			* Helper
+				- Pseudo elements
+				- Sprite
+				- Icons positioning
+
+    ======================================================  */
+
+
+
+
+
+
+/*  ======================================================
+	
+		Colors
+	    
+    ======================================================  */
+
+/* Body */
+body {
+	background-color: rgba(0,0,0,.8);
+	color: rgba(255,255,255,1);
+}
+
+/* Section separator */
+.row::before {
+	background-color: rgba(255,255,255,.1);
+}
+
+/* Home team */
+/* Trend indicator */
+.home-team .trend-indicator::before,
+
+/* Trapezoid unit */
+.home-team .trapezoid-unit::before,
+
+/* Bar graph */
+.home-team .bar,
+
+/* Dodecagon player mask */
+.player-card .home-player.player-img-wrap {
+	background-color: yellow;
+}
+
+/* Vertical bar numeric value */
+.home-team .vertical-bar ~ .bar-value .numeric-value {
+    color: yellow;
+}
+
+/* Circle chart */
+.circle-graph .home-team .circle-unit {
+	border-color: yellow;
+}
+
+
+
+/* Away team */
+/* Trend indicator */
+.away-team .trend-indicator::before,
+
+/* Trapezoid unit */
+.away-team .trapezoid-unit::before,
+
+/* Bar graph */
+.away-team .bar,
+
+/* Dodecagon player mask */
+.player-card .away-player.player-img-wrap {
+	background-color: red;
+}
+
+/* Vertical bar numeric value */
+.away-team .vertical-bar ~ .bar-value .numeric-value {
+    color: red;
+}
+
+/* Circle chart */
+.circle-graph .away-team .circle-unit {
+	border-color: red;
+}
+
+
+
+
+
+
+/*  ======================================================
+	
+		Starter 
+	    
+    ======================================================  */
+
+/* Normalize */
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ul li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+/*  ======================================================
+	
+		Typography	
+	    
+    ======================================================  */
+
+body {
+	font: 62.5%/1.4 "helvetica neue";
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+/*  ======================================================
+	
+		Helper
+	    
+    ======================================================  */
+
+/* Psuedo el */
+.pseudo-el::before,
+.pseudo-el::after {
+	box-sizing: border-box;
+}
+
+/* Sprite */
+.icon::before {
+	content: "";
+	background-image: url("../img/sprite.png");
+	background-repeat: no-repeat;
+	background-size: 1.5625em 17.0875em;
+	width: 3.125em;
+	height: 3.125em;
+	position: absolute;
+}
+
+/* Icons positioning */
+.yellow-hand::before {
+	background-position: 0 -7.8em;
+}
+
+.red-hand::before {
+	background-position: 0 -15.6em;
+}

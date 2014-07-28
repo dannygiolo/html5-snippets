@@ -1,0 +1,592 @@
+/*  ======================================================
+	
+		Table of content
+
+			* Structure
+				- Wrap
+				- Row
+				- Row separator
+
+			* Sections
+				- Common style
+				- Horizontal graphs
+				- Vertical graphs
+				- Circle graphs
+				- Circle graphs with names
+				- Dodecagon graphs
+				- Dodecagon graphs with names
+				- Icons graphs
+
+			* Geometrical elements
+				- Dodecagon
+				- Bars
+
+    ======================================================  */
+
+
+
+
+
+
+/*  ======================================================
+	
+	Structure
+	    
+    ======================================================  */
+
+/* Wrap */
+.wrap {
+	width: 32em;
+	margin: 0 auto;
+}
+
+/* Overlay row */
+.row {
+	position: relative;
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+/* Overlay row separator */
+.row::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 1em;
+	right: 1em;
+	height: 1px;
+}
+
+.row:last-child::before {
+	display: none;
+}
+
+
+
+
+
+/*  ======================================================
+	
+	Sections
+	    
+    ======================================================  */
+
+/* Common style */
+.home-team,
+.away-team {
+	position: relative;
+	width: 10em;
+	margin: 0 2em;
+}
+
+.home-team {
+	float: left;
+}
+
+.away-team {
+	float: right;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.numeric-value {
+	font-size: 3em;
+}
+
+/* Trend indicator in circolar graphs */
+.trend-indicator {
+	position: absolute;
+	width: 1.5em;
+	height: 1em;
+	top: 4.5em;
+}
+
+.trend-indicator::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	/* Mask for striped background */
+	-webkit-mask: url(../img/triangleMask.svg) top left / cover;
+
+	/* Triggering 3d transform for better antialiasing */
+	-webkit-transform: translate3d( 0, 0, 0)
+}
+
+.home-team .trend-indicator {
+	left: -.5em;
+}
+
+.away-team .trend-indicator {
+	right: -.5em;
+}
+
+.trend-indicator.negative-trend {
+	-webkit-transform: rotate(180deg);
+}
+
+/* Numeric value in circolar graphs */
+.circolar-graph--value {
+	position: absolute;
+	top: 1.4em;
+    left: 0;
+    right: 0;
+	font-size: 2.4em;
+    text-align: center;
+}
+
+.home-team .circolar-graph--value {
+	left: 1.5em;
+}
+
+.away-team .circolar-graph--value {
+	right: 1.5em;
+}
+
+/* Horizontal graphs */
+.horizontal-graph {
+	height: 8em;
+}
+
+.horizontal-graph .bar-value {
+	position: absolute;
+	top: -.5em;
+    width: 1.2em;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.horizontal-graph .home-team .bar-value {
+	right: -1.3em;
+}
+
+.horizontal-graph .away-team .bar-value {
+	left: -1.3em;
+}
+
+/* Vertiacal graphs */
+.vertical-graph {
+	height: 21em;
+}
+
+.vertical-graph .home-team,
+.vertical-graph .away-team {
+	height: 15em;
+}
+
+.vertical-graph .bar-value {
+	margin-top: 2em;
+}
+
+.vertical-graph .home-team .bar-value {
+	text-align: right;
+	margin-right: 2.5em;
+}
+
+.vertical-graph .away-team .bar-value {
+	margin-left: 2.5em;
+}
+
+.vertical-graph .bar-value-title {
+	font-size: 1.2em;
+}
+
+/* Circle graphs */
+.circle-graph {
+	height: 16em;
+}
+
+.circle-graph-1st-half-helper,
+.circle-graph-2nd-half-helper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+.circle-graph-1st-half-helper {
+	right: 0;
+	left: 5.4em;
+}
+
+.circle-graph-2nd-half-helper {
+	right: 5.4em;
+	left: 0;
+}
+
+.circle-graph .home-team .circle {
+	left: 1.5em;
+}
+
+.circle-graph .circle-unit {
+	width: 10.8em;
+	height: 10.8em;
+	position: absolute;
+	border-width: 1.3em;
+	border-style: solid;
+	border-radius: 50%;
+	clip: rect(0 10.8em 5.4em 0);
+}
+
+.circle-graph .circle-unit-1st-half {
+	left: -5.4em;
+	transform: rotateZ(-90deg); /* The count for the first half of the circle goes from -90deg to 90deg */
+}
+
+.circle-graph .circle-unit-2nd-half {
+	transform: rotateZ(90deg); /* The count for the first half of the circle goes from 90deg to 270deg */
+}
+
+.circle-graph .away-team .circle {
+	right: 1.5em;
+}
+
+/* Dodecagon graphs */
+.dodecagon-graph {
+	height: 16em;
+}
+
+.dodecagon-graph .home-team .dodecagon {
+	left: 7em;
+}
+
+.dodecagon-graph .away-team .dodecagon {
+	right: -3em;
+}
+
+/* icon graphs */
+.icon-graph {
+    height: 10em;
+}
+
+.icon-graph .home-team,
+.icon-graph .away-team {
+    width: 13em;
+    overflow: hidden;
+}
+
+.icon-graph .home-team {
+    margin: 0 0 0 1em;
+}
+
+.icon-graph .away-team {
+    margin: 0 1em 0 0;
+}
+
+.icon-graph .yellow-cards,
+.icon-graph .red-cards {
+	position: relative;
+}
+
+.icon-graph .home-team .icon {
+	float: right;
+	margin-left: 1.5em;
+}
+
+.icon-graph .away-team .icon {
+	float: left;
+	margin-right: 1.5em;
+}
+
+.icon-graph .home-team .yellow-hand::before {
+    left: .2em;
+}
+
+.icon-graph .home-team .red-hand::before {
+    left: 2.4em;
+}
+
+.icon-graph .away-team .yellow-hand::before {
+    left: .4em;
+}
+
+.icon-graph .away-team .red-hand::before {
+    left: 2.5em;
+}
+
+
+
+
+
+
+/*  ======================================================
+	
+	Geometrical elements
+	    
+    ======================================================  */
+
+.circle {
+	position: relative;
+}
+
+.circle {
+	width: 10.8em;
+	height: 10.8em;
+	position: absolute;
+	top: -.3em;
+
+	background-image: url('../img/circleMask.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.dodecagon {
+	position: relative;
+}
+
+
+.dodecagon::before {
+	content: "";
+	width: 10.7em;
+	height: 10.7em;
+	position: absolute;
+	top: -.3em;
+	left: -5.4em;
+
+	background-image: url('../img/dodecagonMask.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* Trapezoids */
+.trapezoid-unit {
+	position: absolute;
+	visibility: hidden;
+
+	width: 2.8em;
+	height: 1.2em;
+}
+
+.trapezoid-unit::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	/* Mask for striped background */
+	-webkit-mask: url(../img/trapezoidMask.svg) top left / cover;
+
+	/* Triggering 3d transform for better antialiasing */
+	-webkit-transform: translate3d( 0, 0, 0)
+}
+
+/* Transparent gradient */
+.trapezoid-unit::before {
+	background-image: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,.2) 0%,hsla(0,0%,0%,0) 100%);
+}
+
+.trapezoid1 {
+	top: 0;
+	left: -.2em;
+	-webkit-transform: rotate(15deg);
+}
+
+.trapezoid2 {
+	top: 1.2em;
+	left: 1.8em;
+	-webkit-transform: rotate(45deg);
+}
+
+.trapezoid3 {
+	top: 3.2em;
+	left: 3em;
+	-webkit-transform: rotate(75deg);
+}
+
+.trapezoid4 {
+	top: 5.5em;
+	left: 3em;
+	-webkit-transform: rotate(105deg);
+}
+
+.trapezoid5 {
+	top: 7.5em;
+	left: 1.8em;
+	-webkit-transform: rotate(135deg);
+}
+
+.trapezoid6 {
+	top: 8.7em;
+	left: -.2em;
+	-webkit-transform: rotate(165deg);
+}
+
+.trapezoid7 {
+	top: 8.7em;
+	left: -2.6em;
+	-webkit-transform: rotate(195deg);
+}
+
+.trapezoid8 {
+	top: 7.5em;
+	left: -4.6em;
+	-webkit-transform: rotate(225deg);
+}
+
+.trapezoid9 {
+	top: 5.5em;
+	left: -5.8em;
+	-webkit-transform: rotate(255deg);
+}
+
+.trapezoid10 {
+	top: 3.2em;
+	left: -5.8em;
+	-webkit-transform: rotate(285deg);
+}
+
+.trapezoid11 {
+	top: 1.2em;
+	left: -4.6em;
+	-webkit-transform: rotate(315deg);
+}
+
+.trapezoid12 {
+	top: 0em;
+	left: -2.6em;
+	-webkit-transform: rotate(345deg);
+}
+
+/* Display trapezoid segments based on percentage */
+.value-1-12 li:not(:nth-child(1n+2)),
+.value-2-12 li:not(:nth-child(1n+3)),
+.value-3-12 li:not(:nth-child(1n+4)),
+.value-4-12 li:not(:nth-child(1n+5)),
+.value-5-12 li:not(:nth-child(1n+6)),
+.value-6-12 li:not(:nth-child(1n+7)),
+.value-7-12 li:not(:nth-child(1n+8)),
+.value-8-12 li:not(:nth-child(1n+9)),
+.value-9-12 li:not(:nth-child(1n+10)),
+.value-10-12 li:not(:nth-child(1n+11)),
+.value-11-12 li:not(:nth-child(1n+12)),
+.value-12-12 li:not(:nth-child(1n+13)) {
+	visibility: visible;
+}
+
+/* Bars */
+.bar {
+	position: absolute;
+}
+
+.bar::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,.2) 100%);
+}
+
+.background-bar {
+    position: absolute;
+    background-color: transparent;
+}
+
+.horizontal-background-bar {
+    left: 0;
+    right: 0;
+    height: 1.2em;
+    background-image: url(../img/orizontalMask.png);
+}
+
+.vertical-background-bar {
+    width: 1.2em;
+    top: 0;
+    bottom: 0;
+    background-image: url(../img/verticalMask.png);
+}
+
+.home-team .vertical-background-bar {
+    right: 0;
+}
+
+.away-team .vertical-background-bar {
+    left: 0;
+}
+
+.horizontal-bar {
+	height: 1.2em;
+}
+
+.vertical-bar {
+	width: 1.2em;
+	bottom: 0;
+}
+
+.vertical-bar.vertical-bar-overlay {
+	background: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,0.3) 0%,hsla(0,0%,0%,.4) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.vertical-bar ~ .bar-value-overlay .numeric-value {
+	-webkit-mask: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,0.5) 0%,hsla(0,0%,0%,.6) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.home-team .vertical-bar {
+	right: 0;
+}
+
+.away-team .vertical-bar {
+	left: 0;
+}
+
+.home-team .horizontal-bar {
+	right: 0;
+	left: auto;
+}
+
+.away-team .horizontal-bar {
+	left: 0;
+	right: auto;
+}
+
+
+
+
+
+/* Circolar graphs with names */
+.circolar-graph--names.circle-graph {
+	height: 21em;
+}
+
+/* Dodecagon graphs with names */
+.circolar-graph--names.dodecagon-graph {
+	height: 21em;
+}
+
+.circolar-graph--names .player-first-name,
+.circolar-graph--names .player-second-name {
+	text-align: center;
+	position: relative;
+}
+
+.circolar-graph--names .player-first-name {
+	top: 7.5em;
+	font-size: 1.5em;
+}
+
+.circolar-graph--names .player-second-name {
+	width: 7em;
+	top: 5.8em;
+	font-size: 1.9em;
+}
+
+.circolar-graph--names .home-team .player-first-name {
+	left: 1.2em;
+}
+
+.circolar-graph--names .away-team .player-first-name {
+	right: 1.2em;
+}
+
+.circolar-graph--names .away-team .player-second-name {
+	right: 1.8em;
+}
