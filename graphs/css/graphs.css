@@ -21,6 +21,12 @@
 				- Dodecagon
 				- Bars
 
+			* Heat map
+				- Field
+				- Penalties area
+				- Team tactic
+				- Heat mamp grid
+
     ======================================================  */
 
 
@@ -231,16 +237,16 @@
 	border-width: 1.3em;
 	border-style: solid;
 	border-radius: 50%;
-	clip: rect(0 10.8em 5.4em 0);
+	clip: rect(0 5.4em 10.8em 0);
 }
 
 .circle-graph .circle-unit-1st-half {
 	left: -5.4em;
-	transform: rotateZ(-90deg); /* The count for the first half of the circle goes from -90deg to 90deg */
+	transform: rotateZ(-90deg); /* The count for the first half of the circle goes from 0deg to 180deg */
 }
 
 .circle-graph .circle-unit-2nd-half {
-	transform: rotateZ(90deg); /* The count for the first half of the circle goes from 90deg to 270deg */
+	transform: rotateZ(90deg); /* The count for the first half of the circle goes from 180deg to 360deg */
 }
 
 .circle-graph .away-team .circle {
@@ -548,10 +554,6 @@
 	right: auto;
 }
 
-
-
-
-
 /* Circolar graphs with names */
 .circolar-graph--names.circle-graph {
 	height: 21em;
@@ -589,4 +591,306 @@
 
 .circolar-graph--names .away-team .player-second-name {
 	right: 1.8em;
+}
+
+
+
+
+
+
+/*  ======================================================
+	
+	Heat map
+	    
+    ======================================================  */
+
+/* Field */
+.field {
+	box-sizing: content-box;
+	width: 24em;
+	height: 36em;
+	margin: 0 auto 2em;
+	position: relative;
+	background-color: black;
+	border-width: .2em;
+	border-style: solid;
+	border-color: #515152;
+
+	background: -webkit-linear-gradient(top, 
+					hsla(0,0%,8%,.3) 0%,
+					hsla(0,0%,8%,.3) 5%,
+					hsla(0,0%,0%,.3) 5%,
+					hsla(0,0%,0%,.3) 10%,
+					hsla(0,0%,8%,.3) 10%,
+					hsla(0,0%,8%,.3) 15%,
+					hsla(0,0%,0%,.3) 15%,
+					hsla(0,0%,0%,.3) 20%,
+					hsla(0,0%,8%,.3) 20%,
+					hsla(0,0%,8%,.3) 25%,
+					hsla(0,0%,0%,.3) 25%,
+					hsla(0,0%,0%,.3) 30%,
+					hsla(0,0%,8%,.3) 30%,
+					hsla(0,0%,8%,.3) 35%,
+					hsla(0,0%,0%,.3) 35%,
+					hsla(0,0%,0%,.3) 40%,
+					hsla(0,0%,8%,.3) 40%,
+					hsla(0,0%,8%,.3) 45%,
+					hsla(0,0%,0%,.3) 45%,
+					hsla(0,0%,0%,.3) 50%,
+					hsla(0,0%,8%,.3) 50%,
+					hsla(0,0%,8%,.3) 55%,
+					hsla(0,0%,0%,.3) 55%,
+					hsla(0,0%,0%,.3) 60%,
+					hsla(0,0%,8%,.3) 60%,
+					hsla(0,0%,8%,.3) 65%,
+					hsla(0,0%,0%,.3) 65%,
+					hsla(0,0%,0%,.3) 70%,
+					hsla(0,0%,8%,.3) 70%,
+					hsla(0,0%,8%,.3) 75%,
+					hsla(0,0%,0%,.3) 75%,
+					hsla(0,0%,0%,.3) 80%,
+					hsla(0,0%,8%,.3) 80%,
+					hsla(0,0%,8%,.3) 85%,
+					hsla(0,0%,0%,.3) 85%,
+					hsla(0,0%,0%,.3) 90%,
+					hsla(0,0%,8%,.3) 90%,
+					hsla(0,0%,8%,.3) 95%,
+					hsla(0,0%,0%,.3) 95%,
+					hsla(0,0%,0%,.3) 100%);
+}
+
+.field::before,
+.field::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+}
+
+.field::before {
+	width: 100%;
+	height: 1px;
+	background-color: #515152;
+}
+
+.field::after {
+	width: 4em;
+	height: 4em;
+	left: 50%;
+	margin: -2em 0 0 -2em;
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #515152;
+}
+
+/* Penalty areas */
+.field .penalty-area {
+	position: absolute;
+	left: 50%;
+	width: 12em;
+	height: 5.5em;
+	margin-left: -6em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #515152;
+}
+
+.field .penalty-area.top-area {
+	top: -1px;
+}
+
+.field .penalty-area.bottom-area {
+	bottom: -1px;
+}
+
+.field .penalty-area::before,
+.field .penalty-area::after {
+	content: "";
+	position: absolute;
+}
+
+.field .penalty-area::before {
+	width: 4em;
+	height: 4em;
+	left: 50%;
+	margin: -2em 0 0 -2em;
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #515152;
+}
+
+.field .penalty-area.top-area::before {
+	top: 5.3em;
+	clip: rect(2em, 5em, 5em, 0);
+}
+
+.field .penalty-area.bottom-area::before {
+	clip: rect(0, 5em, 2em, 0);
+}
+
+.field .penalty-area.top-area::after,
+.field .penalty-area.bottom-area::after {
+	width: 5.8em;
+	height: 1.7em;
+	left: 50%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #515152;
+}
+
+.field .penalty-area.top-area::after {
+	margin: -1px 0 0 -2.9em;
+}
+
+.field .penalty-area.bottom-area::after {
+	bottom: 0;
+	margin: 0 0 -1px -2.9em;
+}
+
+/* Team tactic */
+.team-tactic {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.team-tactic .player {
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	z-index: 1;
+	border-radius: 50%;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5em;
+	background-color: yellow;
+	color: #000;
+}
+
+.team-tactic .player-1 {
+	top: .5em;
+	left: 5.2em;
+}
+
+.team-tactic .player-2 {
+	top: 4.5em;
+	left: 1em;
+}
+
+.team-tactic .player-3 {
+	top: 4.5em;
+	right: 1em;
+}
+
+.team-tactic .player-4 {
+	top: 9em;
+	left: 3.7em;
+}
+
+.team-tactic .player-5 {
+	top: 4em;
+	left: 3.7em;
+}
+
+.team-tactic .player-6 {
+	top: 4em;
+	right: 3.7em;
+}
+
+.team-tactic .player-7 {
+	top: 10em;
+	left: 1em;
+}
+
+.team-tactic .player-8 {
+	top: 9em;
+	right: 3.7em;
+}
+
+.team-tactic .player-9 {
+	top: 14em;
+	left: 4em;
+}
+
+.team-tactic .player-10 {
+	top: 13em;
+	right: 4em;
+}
+
+.team-tactic .player-11 {
+	top: 10em;
+	right: 1em;
+}
+
+/* Heat map grid */
+/* The heat map grid xml is for an horizontal field */
+/* Our field is vertical */
+.field-grid {
+	width: 36em;
+	height: 24em;
+	position: absolute;
+	z-index: 1;
+	top: -24em; /* Setting the proper origin point for transform */
+	border-collapse: collapse;
+	transform-origin: bottom left;
+	transform: rotate(90deg);
+}
+
+/* Heat map color */
+[class^="value-"] {
+	-webkit-filter: blur(0);
+	opacity: .7;
+}
+
+.value-1 {
+	background-color: #ff0;
+	box-shadow: inset 0 0 3px #ff0;
+	opacity: .2;
+}
+
+.value-2 {
+	background-color: #ecea03;
+	box-shadow: inset 0 0 3px #ecea03;
+	opacity: .4;
+}
+
+.value-3 {
+	background-color: #ebd702;
+	box-shadow: inset 0 0 3px #ebd702;
+	opacity: .6;
+}
+
+.value-4 {
+	background-color: #e4bc03;
+	box-shadow: inset 0 0 3px #e4bc03;
+	opacity: .8;
+}
+
+.value-5 {
+	background-color: #e09903;
+	box-shadow: inset 0 0 3px #e09903;
+}
+
+.value-6 {
+	background-color: #d96c02;
+	box-shadow: inset 0 0 3px #d96c02;
+}
+
+.value-7 {
+	background-color: #d14403;
+	box-shadow: inset 0 0 3px #d14403;
+}
+
+.value-8 {
+	background-color: #cc1e03;
+	box-shadow: inset 0 0 3px #cc1e03;
+}
+
+.value-9,
+.value-10 {
+	background-color: #d60b03;
+	box-shadow: inset 0 0 3px #d60b03;
 }
