@@ -1,0 +1,248 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Circular graph
+
+			* Circle graph
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Circle graph
+
+	=======================================================  */
+
+.circle-graph {
+	
+	.circle {
+		position: absolute;
+		width: $circular-element--radius;
+		height: $circular-element--radius;
+		top: -.3em;
+
+		background-image: url('../img/circleMask.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	/* Helper */
+	.circle-graph-1st-half-helper,
+	.circle-graph-2nd-half-helper {
+		position: absolute;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.circle-graph-1st-half-helper {
+		right: 0;
+		left: $circular-element--radius / 2;
+	}
+
+	.circle-graph-2nd-half-helper {
+		right: $circular-element--radius / 2;
+		left: 0;
+	}
+
+	.home-team .circle {
+		left: 1.5em;
+	}
+
+	.circle-unit {
+		width: $circular-element--radius;
+		height: $circular-element--radius;
+		position: absolute;
+		border-width: $circular-element-value--width;
+		border-style: solid;
+		border-radius: 50%;
+		clip: rect(0 ($circular-element--radius / 2) $circular-element--radius 0);
+	}
+
+	.circle-unit-1st-half {
+		left: - ($circular-element--radius / 2);
+		transform: rotateZ(-90deg); /* The count for the first half of the circle goes from 0deg to 180deg */
+	}
+
+	.circle-unit-2nd-half {
+		transform: rotateZ(90deg); /* The count for the first half of the circle goes from 180deg to 360deg */
+	}
+
+	.away-team .circle {
+		right: 1.5em;
+	}
+}
+
+
+
+
+
+
+/*  =======================================================
+
+		Dodecagon graph
+
+	=======================================================  */
+
+.dodecagon-graph {
+
+	.home-team .dodecagon {
+		position: relative;
+		left: 7em;
+	}
+
+	.away-team .dodecagon {
+		position: relative;
+		right: -3em;
+	}
+
+	.dodecagon::before {
+		content: "";
+		width: $circular-element--radius;
+		height: $circular-element--radius;
+		position: absolute;
+		top: -.3em;
+		left: - ($circular-element--radius / 2);
+
+		background-image: url('../img/dodecagonMask.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	/* Trapezoids */
+	.trapezoid-unit {
+		position: absolute;
+		visibility: hidden;
+
+		width: 2.8em;
+		height: $circular-element-value--width;
+	}
+
+	.trapezoid-unit::before {
+		content: "";
+		position: absolute;
+		width: inherit;
+		height: inherit;
+
+		/* Mask for striped background */
+		-webkit-mask: url(../img/trapezoidMask.svg) top left / cover;
+
+		/* Triggering 3d transform for better antialiasing */
+		-webkit-transform: translate3d( 0, 0, 0)
+	}
+
+	/* Transparent gradient */
+	.trapezoid-unit::before {
+		background-image: $trapezoid-unit--background-image;
+	}
+
+	.trapezoid1 {
+		top: 0;
+		left: -.2em;
+		-webkit-transform: rotate(15deg + (30 * 0));
+	}
+
+	.trapezoid2 {
+		top: 1.2em;
+		left: 1.8em;
+		-webkit-transform: rotate(15deg + (30 * 1));
+	}
+
+	.trapezoid3 {
+		top: 3.2em;
+		left: 3em;
+		-webkit-transform: rotate(15deg + (30 * 2));
+	}
+
+	.trapezoid4 {
+		top: 5.5em;
+		left: 3em;
+		-webkit-transform: rotate(15deg + (30 * 3));
+	}
+
+	.trapezoid5 {
+		top: 7.5em;
+		left: 1.8em;
+		-webkit-transform: rotate(15deg + (30 * 4));
+	}
+
+	.trapezoid6 {
+		top: 8.7em;
+		left: -.2em;
+		-webkit-transform: rotate(15deg + (30 * 5));
+	}
+
+	.trapezoid7 {
+		top: 8.7em;
+		left: -2.6em;
+		-webkit-transform: rotate(15deg + (30 * 6));
+	}
+
+	.trapezoid8 {
+		top: 7.5em;
+		left: -4.6em;
+		-webkit-transform: rotate(15deg + (30 * 7));
+	}
+
+	.trapezoid9 {
+		top: 5.5em;
+		left: -5.8em;
+		-webkit-transform: rotate(15deg + (30 * 8));
+	}
+
+	.trapezoid10 {
+		top: 3.2em;
+		left: -5.8em;
+		-webkit-transform: rotate(15deg + (30 * 9));
+	}
+
+	.trapezoid11 {
+		top: 1.2em;
+		left: -4.6em;
+		-webkit-transform: rotate(15deg + (30 * 10));
+	}
+
+	.trapezoid12 {
+		top: 0em;
+		left: -2.6em;
+		-webkit-transform: rotate(15deg + (30 * 11));
+	}
+
+	/* Display trapezoid segments based on percentage */
+	.value-1-12 li:not(:nth-child(1n + 2)),
+	.value-2-12 li:not(:nth-child(1n + 3)),
+	.value-3-12 li:not(:nth-child(1n + 4)),
+	.value-4-12 li:not(:nth-child(1n + 5)),
+	.value-5-12 li:not(:nth-child(1n + 6)),
+	.value-6-12 li:not(:nth-child(1n + 7)),
+	.value-7-12 li:not(:nth-child(1n + 8)),
+	.value-8-12 li:not(:nth-child(1n + 9)),
+	.value-9-12 li:not(:nth-child(1n + 10)),
+	.value-10-12 li:not(:nth-child(1n + 11)),
+	.value-11-12 li:not(:nth-child(1n + 12)),
+	.value-12-12 li:not(:nth-child(1n + 13)) {
+		visibility: visible;
+	}
+}

@@ -1,0 +1,154 @@
+/*  =======================================================
+
+		Table of content
+
+	  		* Matrix
+
+	  		* Sprite
+
+			* Icons position
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Matrix
+
+	======================================================= */
+	
+/* Full size */
+$x: $full-size-sprite-grid--width;
+$y: $full-size-sprite-grid--width;
+
+/* Half size */
+$z: $small-size-sprite-grid--width;
+$w: $small-size-sprite-grid--width;
+
+
+
+
+
+/*  =======================================================
+
+		Sprite
+
+	======================================================= */
+
+/* Common style for all versions */
+.icon {
+	background-image: url("../img/sprite.png");
+	background-repeat: no-repeat;
+	background-size: 5em 55em;
+}
+
+.icon.small-size {
+	background-size: 3em 30em;
+}
+
+
+
+
+
+
+/*  =======================================================
+
+		Icons position
+
+	======================================================= */
+
+/* Full size */
+.icon.ball {
+	background-position: (-($x * 0)) (-($y * 0));
+}
+
+.icon.assist {
+	background-position: (-($x * 0)) (-($y * 1));
+}
+
+.icon.shoe {
+	background-position: (-($x * 0)) (-($y * 2));
+}
+
+.icon.whistle {
+	background-position: (-($x * 0)) (-($y * 3));
+}
+
+.icon.flag {
+	background-position: (-($x * 0)) (-($y * 4));
+}
+
+.icon.yellow-hand {
+	background-position: (-($x * 0)) (-($y * 5));
+}
+
+.icon.substitution {
+	background-position: (-($x * 0)) (-($y * 6));
+}
+
+.icon.ball-small {
+	background-position: (-($x * 0)) (-($y * 7));
+}
+
+.icon.yellow-card {
+	background-position: (-($x * 0)) (-($y * 8));
+}
+
+.icon.back-btn {
+	background-position: (-($x * 0)) (-($y * 9));
+}
+
+.icon.red-hand {
+	background-position: (-($x * 0)) (-($y * 10));
+}
+
+/* Half size */
+.small-size {
+	&.icon.ball {
+		background-position: (-($z * 0)) (-($w * 0));
+	}
+
+	&.icon.assist {
+		background-position: (-($z * 0)) (-($w * 1));
+	}
+
+	&.icon.shoe {
+		background-position: (-($z * 0)) (-($w * 2));
+	}
+
+	&.icon.whistle {
+		background-position: (-($z * 0)) (-($w * 3));
+	}
+
+	&.icon.flag {
+		background-position: (-($z * 0)) (-($w * 4));
+	}
+
+	&.icon.yellow-hand {
+		background-position: (-($z * 0)) (-($w * 5));
+	}
+
+	&.icon.substitution {
+		background-position: (-($z * 0)) (-($w * 6));
+	}
+
+	&.icon.ball-small {
+		background-position: (-($z * 0)) (-($w * 7));
+	}
+
+	&.icon.yellow-card {
+		background-position: (-($z * 0)) (-($w * 8));
+	}
+
+	&.icon.back-btn {
+		background-position: (-($z * 0)) (-($w * 9));
+	}
+
+	&.icon.red-hand {
+		background-position: (-($z * 0)) (-($w * 10));
+	}
+}

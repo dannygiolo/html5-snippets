@@ -1,0 +1,119 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Lineup graph
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Lineup graph
+
+	=======================================================  */
+
+.lineup-graph {
+
+	.team-logo {
+		position: relative;
+		top: $lineup-graph-team-logo--top-offset;
+	}
+
+	.team-name {
+		margin-bottom: .3em;
+	} 
+
+	.players-stats--list > li {
+		height: $lineup-graph-players-stats-list-li--height;
+
+		> a {
+			display: block;
+			overflow: hidden;
+		}
+
+		> a,
+		.numeric-value {
+			height: inherit;
+		}
+
+		.numeric-value {
+			padding-top: $lineup-graph-numeric-value--padding-top;
+			font-size: $lineup-graph-numeric-value--font-size;
+		}
+
+		.value-label {
+			position: relative;
+			top: $lineup-graph-value-label-padding-top;
+		}
+
+		.icon-wrap {
+			display: block;
+			margin-top: $lineup-graph-icon-wrap--margin-top;
+			position: relative;
+		}
+
+		.icon {
+			display: block;
+			width: $lineup-graph-icon--width;
+			height: $lineup-graph-icon--height;
+		}
+	}
+
+	&.home-team {
+
+		.team-logo {
+			float: left;
+			margin-right: $lineup-graph-team-logo--horizontal-margin;
+		}
+
+		.icon-wrap {
+			left: $lineup-graph-icon-wrap--horizontal-offset;
+		}
+
+		.icon {
+			
+			float: left;
+		}
+	}
+
+	&.away-team {
+
+		.team-logo {
+			float: right;
+			margin-left: $lineup-graph-team-logo--horizontal-margin;
+		}
+
+		.team-name {
+			text-align: right;
+		}
+
+		.icon-wrap {
+			right: $lineup-graph-icon-wrap--horizontal-offset;
+		}
+
+		.icon {
+			float: right;
+		}
+	}
+}

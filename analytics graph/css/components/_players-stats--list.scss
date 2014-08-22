@@ -1,0 +1,109 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Players/stats list
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Players/stats list
+
+	=======================================================  */
+
+/* Players/stats list */
+.players-stats--list {
+
+	> li {
+		overflow: hidden;
+		padding: $players-stats-list-li--padding;
+		border-width: $nav-li-border--width 0 0;
+	}
+
+	.numeric-value,
+	.value-label {
+		display: inline-block;
+	}
+
+	.numeric-value {
+		position: relative;
+		width: 2em;
+		text-align: center;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: $nav-li-separator--offset;
+			bottom: $nav-li-separator--offset;
+			width: $nav-li-border--width;
+		}
+	}
+
+	.value-label {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: $players-stats-list-player-name--font-size;
+	}
+}
+
+.home-team {
+
+	.players-stats--list {
+		
+		.numeric-value,
+		.value-label {
+			float: left;
+		}
+
+		.numeric-value {
+			clear: left;
+
+			&::after {
+				right: .3em;
+			}
+		}	
+	}
+}
+
+.away-team {
+
+	.players-stats--list {
+
+		.numeric-value,
+		.value-label {
+			float: right;
+		}
+
+		.numeric-value {
+			clear: right;
+
+			&::after {
+				left: .3em;
+			}
+		}	
+	}
+}

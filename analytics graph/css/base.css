@@ -1,0 +1,4110 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Dev
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+	
+		Table of content
+
+			* Starter
+				- New box model
+				- Resetting
+				- Normalizing		
+	  
+	======================================================= */
+/*  =======================================================
+
+		Starter
+
+	=======================================================  */
+/* New box model */
+/* Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box; }
+
+* {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Resetting */
+/* Feel free to add any other elements you may need */
+/* Source: http://meyerweb.com/eric/tools/css/reset/ */
+html,
+body,
+ul,
+li,
+ol,
+fieldset,
+input,
+button,
+figure {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: transparent;
+  font-size: 1em; }
+
+button,
+select {
+  cursor: pointer; }
+
+/* Normalizing */
+a {
+  text-decoration: none; }
+
+:focus,
+:active {
+  outline: none;
+  /* Make sure to style those somewhere else */ }
+
+img {
+  border: none;
+  max-width: 100%; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Font declaration
+				- Base declaration
+				- Color declaration
+			
+			* @Font-face with style linking
+				- Brief
+				- Drawbacks
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Base font declaration
+
+	=======================================================  */
+/* Confused on what to use between px, em and rem? */
+/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+  font-size: 62.5%;
+  /* 62.5% = 1em = 10px */
+  line-height: 1.4;
+  font-family: oswaldlight, sans-serif;
+  color: white; }
+
+/* Setting font size for headings, paragraphs, blockquotes */
+h1 {
+  font-size: 3.2em; }
+
+h2 {
+  font-size: 2.4em; }
+
+h3 {
+  font-size: 1.3125em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 1em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  margin: 0; }
+
+/*  =======================================================
+
+		@Font-face with style linking
+
+	=======================================================  */
+@font-face {
+  font-family: 'oswaldbook';
+  src: url("../fonts/oswald-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'oswaldlight';
+  src: url("../fonts/oswald-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/* Additional classes for style linking */
+.heat-map .team-tactic li {
+  font-family: 'oswaldbook', arial, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+/*  =======================================================
+
+		Table of content
+
+	  		* Matrix
+
+	  		* Sprite
+
+			* Icons position
+
+	======================================================= */
+/*  =======================================================
+
+		Matrix
+
+	======================================================= */
+/* Full size */
+/* Half size */
+/*  =======================================================
+
+		Sprite
+
+	======================================================= */
+/* Common style for all versions */
+.icon {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 5em 55em; }
+
+.icon.small-size {
+  background-size: 3em 30em; }
+
+/*  =======================================================
+
+		Icons position
+
+	======================================================= */
+/* Full size */
+.icon.ball {
+  background-position: 0em 0em; }
+
+.icon.assist {
+  background-position: 0em -5em; }
+
+.icon.shoe {
+  background-position: 0em -10em; }
+
+.icon.whistle {
+  background-position: 0em -15em; }
+
+.icon.flag {
+  background-position: 0em -20em; }
+
+.icon.yellow-hand {
+  background-position: 0em -25em; }
+
+.icon.substitution {
+  background-position: 0em -30em; }
+
+.icon.ball-small {
+  background-position: 0em -35em; }
+
+.icon.yellow-card {
+  background-position: 0em -40em; }
+
+.icon.back-btn {
+  background-position: 0em -45em; }
+
+.icon.red-hand {
+  background-position: 0em -50em; }
+
+/* Half size */
+.small-size.icon.ball {
+  background-position: 0em 0em; }
+.small-size.icon.assist {
+  background-position: 0em -2.7em; }
+.small-size.icon.shoe {
+  background-position: 0em -5.4em; }
+.small-size.icon.whistle {
+  background-position: 0em -8.1em; }
+.small-size.icon.flag {
+  background-position: 0em -10.8em; }
+.small-size.icon.yellow-hand {
+  background-position: 0em -13.5em; }
+.small-size.icon.substitution {
+  background-position: 0em -16.2em; }
+.small-size.icon.ball-small {
+  background-position: 0em -18.9em; }
+.small-size.icon.yellow-card {
+  background-position: 0em -21.6em; }
+.small-size.icon.back-btn {
+  background-position: 0em -24.3em; }
+.small-size.icon.red-hand {
+  background-position: 0em -27em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Main Structure
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Main Structure
+
+	=======================================================  */
+/* Wrap */
+.wrap {
+  width: 32em;
+  margin: 0 auto; }
+
+/* Row */
+.row {
+  position: relative;
+  margin: 2em 0;
+  overflow: hidden; }
+
+/* Row separator */
+.row::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px; }
+
+.row:last-child::before {
+  display: none; }
+
+/* Home/away rows */
+.home-team--row,
+.away-team--row {
+  position: relative;
+  width: 10em;
+  margin: 0 1.8em; }
+
+.home-team--row {
+  float: left; }
+
+.away-team--row {
+  float: right; }
+
+/* Section title */
+.section-title {
+  text-align: center;
+  margin: 0 0 0.8em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Z-index maps
+
+			* Hiding classes
+
+	======================================================= */
+/*  =======================================================
+
+		Z-index maps
+
+	=======================================================  */
+/* Warning: if this break the compiler, please substitute the proper z-index value in the proper selector */
+/*  =======================================================
+
+		Hiding classes
+
+	=======================================================  */
+.remove {
+  display: none !important; }
+
+/* Accessible by screen reader */
+.hide {
+  position: absolute !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: none !important; }
+
+/*  =======================================================
+
+		Table of Content
+
+			* Imports
+
+	    	* Lists
+	    		- Horizontal
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  ========================================================
+
+		Lists
+
+	=======================================================  */
+/* Horizontal */
+.nav > li {
+  display: inline-block; }
+
+/*  =======================================================
+
+		Table of Content
+
+			* Imports
+
+	    	* Nav
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Nav
+
+	=======================================================  */
+.nav {
+  height: 4em;
+  line-height: 4em;
+  text-align: center; }
+  .nav > li {
+    width: 32%;
+    position: relative; }
+  .nav > li::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    bottom: 20%;
+    width: 1px; }
+  .nav > li:first-child::after {
+    display: none; }
+  .nav > li > a {
+    display: block;
+    font-size: 1.6em; }
+  .nav > li > a > span {
+    padding-bottom: 0.1em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-bottom-color: transparent; }
+
+/* Tabs nav */
+.tabs-nav {
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Bar
+				- Horizontal bar
+				- Vertical bar
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Bar
+
+	=======================================================  */
+.bar-graph .bar--wrap,
+.bar-graph .background-bar,
+.bar-graph .bar,
+.bar-graph .bar-overlay {
+  position: absolute; }
+.bar-graph .bar-overlay {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+/* Horizontal bar */
+.horizontal-bar .bar--wrap {
+  height: 1.2em;
+  left: 0;
+  right: 0; }
+.horizontal-bar .background-bar {
+  width: 100%;
+  height: inherit;
+  background-image: url(../img/orizontalMask.png); }
+.horizontal-bar .bar,
+.horizontal-bar .bar-overlay {
+  height: inherit; }
+.horizontal-bar .home-team .bar,
+.horizontal-bar .home-team .bar-overlay {
+  right: 0; }
+.horizontal-bar .away-team .bar {
+  left: 0; }
+
+/* Vertical bar */
+.vertical-bar .bar--wrap {
+  width: 1.2em;
+  top: 0;
+  bottom: 0; }
+.vertical-bar .home-team .bar--wrap {
+  right: 0; }
+.vertical-bar .away-team .bar--wrap {
+  left: 0; }
+.vertical-bar .background-bar {
+  width: inherit;
+  height: 100%;
+  background-image: url(../img/verticalMask.png); }
+.vertical-bar .bar,
+.vertical-bar .bar-overlay {
+  width: inherit;
+  bottom: 0; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Circular graph
+
+			* Circle graph
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Circle graph
+
+	=======================================================  */
+.circle-graph {
+  /* Helper */ }
+  .circle-graph .circle {
+    position: absolute;
+    width: 10.6em;
+    height: 10.6em;
+    top: -.3em;
+    background-image: url("../img/circleMask.png");
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .circle-graph .circle-graph-1st-half-helper,
+  .circle-graph .circle-graph-2nd-half-helper {
+    position: absolute;
+    height: 100%;
+    overflow: hidden; }
+  .circle-graph .circle-graph-1st-half-helper {
+    right: 0;
+    left: 5.3em; }
+  .circle-graph .circle-graph-2nd-half-helper {
+    right: 5.3em;
+    left: 0; }
+  .circle-graph .home-team .circle {
+    left: 1.5em; }
+  .circle-graph .circle-unit {
+    width: 10.6em;
+    height: 10.6em;
+    position: absolute;
+    border-width: 1.2em;
+    border-style: solid;
+    border-radius: 50%;
+    clip: rect(0 5.3em 10.6em 0); }
+  .circle-graph .circle-unit-1st-half {
+    left: -5.3em;
+    transform: rotateZ(-90deg);
+    /* The count for the first half of the circle goes from 0deg to 180deg */ }
+  .circle-graph .circle-unit-2nd-half {
+    transform: rotateZ(90deg);
+    /* The count for the first half of the circle goes from 180deg to 360deg */ }
+  .circle-graph .away-team .circle {
+    right: 1.5em; }
+
+/*  =======================================================
+
+		Dodecagon graph
+
+	=======================================================  */
+.dodecagon-graph {
+  /* Trapezoids */
+  /* Transparent gradient */
+  /* Display trapezoid segments based on percentage */ }
+  .dodecagon-graph .home-team .dodecagon {
+    position: relative;
+    left: 7em; }
+  .dodecagon-graph .away-team .dodecagon {
+    position: relative;
+    right: -3em; }
+  .dodecagon-graph .dodecagon::before {
+    content: "";
+    width: 10.6em;
+    height: 10.6em;
+    position: absolute;
+    top: -.3em;
+    left: -5.3em;
+    background-image: url("../img/dodecagonMask.png");
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .dodecagon-graph .trapezoid-unit {
+    position: absolute;
+    visibility: hidden;
+    width: 2.8em;
+    height: 1.2em; }
+  .dodecagon-graph .trapezoid-unit::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    /* Mask for striped background */
+    -webkit-mask: url(../img/trapezoidMask.svg) top left/cover;
+    /* Triggering 3d transform for better antialiasing */
+    -webkit-transform: translate3d(0, 0, 0); }
+  .dodecagon-graph .trapezoid-unit::before {
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%); }
+  .dodecagon-graph .trapezoid1 {
+    top: 0;
+    left: -.2em;
+    -webkit-transform: rotate(15deg); }
+  .dodecagon-graph .trapezoid2 {
+    top: 1.2em;
+    left: 1.8em;
+    -webkit-transform: rotate(45deg); }
+  .dodecagon-graph .trapezoid3 {
+    top: 3.2em;
+    left: 3em;
+    -webkit-transform: rotate(75deg); }
+  .dodecagon-graph .trapezoid4 {
+    top: 5.5em;
+    left: 3em;
+    -webkit-transform: rotate(105deg); }
+  .dodecagon-graph .trapezoid5 {
+    top: 7.5em;
+    left: 1.8em;
+    -webkit-transform: rotate(135deg); }
+  .dodecagon-graph .trapezoid6 {
+    top: 8.7em;
+    left: -.2em;
+    -webkit-transform: rotate(165deg); }
+  .dodecagon-graph .trapezoid7 {
+    top: 8.7em;
+    left: -2.6em;
+    -webkit-transform: rotate(195deg); }
+  .dodecagon-graph .trapezoid8 {
+    top: 7.5em;
+    left: -4.6em;
+    -webkit-transform: rotate(225deg); }
+  .dodecagon-graph .trapezoid9 {
+    top: 5.5em;
+    left: -5.8em;
+    -webkit-transform: rotate(255deg); }
+  .dodecagon-graph .trapezoid10 {
+    top: 3.2em;
+    left: -5.8em;
+    -webkit-transform: rotate(285deg); }
+  .dodecagon-graph .trapezoid11 {
+    top: 1.2em;
+    left: -4.6em;
+    -webkit-transform: rotate(315deg); }
+  .dodecagon-graph .trapezoid12 {
+    top: 0em;
+    left: -2.6em;
+    -webkit-transform: rotate(345deg); }
+  .dodecagon-graph .value-1-12 li:not(:nth-child(1n + 2)),
+  .dodecagon-graph .value-2-12 li:not(:nth-child(1n + 3)),
+  .dodecagon-graph .value-3-12 li:not(:nth-child(1n + 4)),
+  .dodecagon-graph .value-4-12 li:not(:nth-child(1n + 5)),
+  .dodecagon-graph .value-5-12 li:not(:nth-child(1n + 6)),
+  .dodecagon-graph .value-6-12 li:not(:nth-child(1n + 7)),
+  .dodecagon-graph .value-7-12 li:not(:nth-child(1n + 8)),
+  .dodecagon-graph .value-8-12 li:not(:nth-child(1n + 9)),
+  .dodecagon-graph .value-9-12 li:not(:nth-child(1n + 10)),
+  .dodecagon-graph .value-10-12 li:not(:nth-child(1n + 11)),
+  .dodecagon-graph .value-11-12 li:not(:nth-child(1n + 12)),
+  .dodecagon-graph .value-12-12 li:not(:nth-child(1n + 13)) {
+    visibility: visible; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Common style
+
+			* Heat map
+				- Field
+				- Penalty areas
+
+			* Team tactic
+
+			* Grid
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  ======================================================
+
+		Common style
+
+    ======================================================  */
+/* This is used to recreat the field lines for all the elements in the field except the outer border */
+.heat-map .field::after, .heat-map .field .penalty-area, .heat-map .field .penalty-area::before, .heat-map .field .penalty-area.top-area::after,
+.heat-map .field .penalty-area.bottom-area::after {
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: #515152;
+  z-index: 600; }
+
+/*  ======================================================
+
+		Heat map
+
+    ======================================================  */
+.heat-map {
+  padding-bottom: 2em;
+  /* Field */
+  /* Penalty areas */
+  /*  ======================================================
+  
+  		Team tactic
+  
+      ======================================================  */
+  /*  ======================================================
+  
+  		Grid
+  
+      ======================================================  */
+  /* The heat map grid xml is for an horizontal field */
+  /* Our field is vertical */ }
+  .heat-map .field {
+    box-sizing: content-box;
+    width: 27em;
+    height: 36em;
+    margin: 0 auto;
+    position: relative;
+    border-width: 0.2em; }
+  .heat-map .field::before,
+  .heat-map .field::after {
+    content: "";
+    position: absolute;
+    top: 50%; }
+  .heat-map .field::before {
+    width: 100%;
+    height: 0.1em; }
+  .heat-map .field::after {
+    width: 5.5em;
+    height: 5.5em;
+    left: 50%;
+    margin: -2.75em 0 0 -2.75em;
+    border-radius: 50%; }
+  .heat-map .field .penalty-area {
+    position: absolute;
+    left: 50%;
+    width: 13.5em;
+    height: 5.4em;
+    margin-left: -6.95em; }
+  .heat-map .field .penalty-area.top-area {
+    top: -.1em; }
+  .heat-map .field .penalty-area.bottom-area {
+    bottom: -.1em; }
+  .heat-map .field .penalty-area::before,
+  .heat-map .field .penalty-area::after {
+    content: "";
+    position: absolute; }
+  .heat-map .field .penalty-area::before {
+    width: 5.5em;
+    height: 5.5em;
+    left: 50%;
+    margin: -2.75em 0 0 -2.75em;
+    border-radius: 50%; }
+  .heat-map .field .penalty-area.top-area::before {
+    top: 100%;
+    clip: rect(2.75em, 5.7em, 5.7em, 0); }
+  .heat-map .field .penalty-area.bottom-area::before {
+    clip: rect(0, 5.7em, 2.75em, 0); }
+  .heat-map .field .penalty-area.top-area::after,
+  .heat-map .field .penalty-area.bottom-area::after {
+    width: 5.8em;
+    height: 1.7em;
+    left: 50%; }
+  .heat-map .field .penalty-area.top-area::after {
+    margin: -0.1em 0 0 -2.9em; }
+  .heat-map .field .penalty-area.bottom-area::after {
+    bottom: 0;
+    margin: 0 0 -0.1em -2.9em; }
+  .heat-map .team-tactic li {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    margin: -0.75em 0 0 -0.75em;
+    z-index: 1000;
+    border-radius: 50%;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    /* Faking players positioning */
+    /* To be removed before riccardizing */ }
+    .heat-map .team-tactic li:nth-child(1) {
+      top: 5%;
+      left: 50%; }
+    .heat-map .team-tactic li:nth-child(2) {
+      top: 30%;
+      left: 10%; }
+    .heat-map .team-tactic li:nth-child(3) {
+      top: 30%;
+      left: 90%; }
+    .heat-map .team-tactic li:nth-child(4) {
+      top: 50%;
+      left: 35%; }
+    .heat-map .team-tactic li:nth-child(5) {
+      top: 25%;
+      left: 35%; }
+    .heat-map .team-tactic li:nth-child(6) {
+      top: 25%;
+      left: 65%; }
+    .heat-map .team-tactic li:nth-child(7) {
+      top: 60%;
+      left: 10%; }
+    .heat-map .team-tactic li:nth-child(8) {
+      top: 50%;
+      left: 65%; }
+    .heat-map .team-tactic li:nth-child(9) {
+      top: 80%;
+      left: 45%; }
+    .heat-map .team-tactic li:nth-child(10) {
+      top: 70%;
+      left: 55%; }
+    .heat-map .team-tactic li:nth-child(11) {
+      top: 60%;
+      left: 90%; }
+    .heat-map .team-tactic li.active::before {
+      content: "";
+      position: absolute;
+      width: 3em;
+      height: 3em;
+      top: -0.75em;
+      left: -0.75em;
+      border-radius: 50%; }
+  .heat-map .field-grid {
+    height: 27em;
+    width: 36em;
+    position: absolute;
+    z-index: 800;
+    top: -27em;
+    /* Setting the proper origin point for transform */
+    border-collapse: collapse;
+    transform-origin: bottom left;
+    transform: rotate(90deg); }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Players/stats list
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Players/stats list
+
+	=======================================================  */
+/* Players/stats list */
+.players-stats--list > li {
+  overflow: hidden;
+  padding: 0.3em 0;
+  border-width: 1px 0 0; }
+.players-stats--list .numeric-value,
+.players-stats--list .value-label {
+  display: inline-block; }
+.players-stats--list .numeric-value {
+  position: relative;
+  width: 2em;
+  text-align: center; }
+  .players-stats--list .numeric-value::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    width: 1px; }
+.players-stats--list .value-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2em; }
+
+.home-team .players-stats--list .numeric-value,
+.home-team .players-stats--list .value-label {
+  float: left; }
+.home-team .players-stats--list .numeric-value {
+  clear: left; }
+  .home-team .players-stats--list .numeric-value::after {
+    right: .3em; }
+
+.away-team .players-stats--list .numeric-value,
+.away-team .players-stats--list .value-label {
+  float: right; }
+.away-team .players-stats--list .numeric-value {
+  clear: right; }
+  .away-team .players-stats--list .numeric-value::after {
+    left: .3em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Heat map
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Heat map
+
+	=======================================================  */
+.heat-map--lineup .player-name {
+  max-width: 12em;
+  margin-top: 0.4em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Circular graphs
+				- Section dimensions
+				- Numeric value
+				- Trend indicator
+				- Circular element
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Circular graphs
+
+	=======================================================  */
+/* Section dimensions */
+.circular-graph {
+  height: 18em; }
+
+.circular-graph--names {
+  height: 23em; }
+
+.circular-graph {
+  /* Numeric value in circular graphs */
+  /* Trend indicator in circular graphs */ }
+  .circular-graph .circular-graph--value {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    font-size: 2.4em;
+    text-align: center; }
+    .circular-graph .circular-graph--value > sup {
+      font-size: 0.6em;
+      position: relative;
+      top: 0.1em;
+      right: 0.1em; }
+  .circular-graph .home-team .circular-graph--value {
+    left: 1.8em; }
+  .circular-graph .away-team .circular-graph--value {
+    right: 1.2em; }
+  .circular-graph .trend-indicator {
+    position: absolute;
+    width: 1.5em;
+    height: 1em;
+    top: 4.6em; }
+    .circular-graph .trend-indicator.negative-trend {
+      -webkit-transform: rotate(180deg); }
+  .circular-graph .trend-indicator::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Mask for striped background */
+    -webkit-mask: url(../img/triangleMask.svg) top left/cover;
+    /* Triggering 3d transform for better antialiasing */
+    -webkit-transform: translate3d(0, 0, 0); }
+  .circular-graph .home-team .trend-indicator {
+    left: -.5em; }
+  .circular-graph .away-team .trend-indicator {
+    right: -.5em; }
+
+/*  =======================================================
+
+		Circular graphs with names
+
+	=======================================================  */
+.circular-graph--names .player-first-name,
+.circular-graph--names .player-second-name {
+  text-align: center;
+  position: relative; }
+.circular-graph--names .player-first-name {
+  margin: 0;
+  top: 7.5em;
+  font-size: 1.5em; }
+.circular-graph--names .player-second-name {
+  width: 7em;
+  top: 6.2em;
+  font-size: 1.9em; }
+.circular-graph--names .home-team .player-first-name {
+  left: 1.2em; }
+.circular-graph--names .away-team .player-first-name {
+  right: 1.2em; }
+.circular-graph--names .away-team .player-second-name {
+  right: 1.8em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Horizontal graph
+				- Bar value
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Horizontal graph
+
+	=======================================================  */
+.horizontal-graph {
+  height: 9em;
+  /* Bar value */ }
+  .horizontal-graph .bar-value {
+    position: absolute;
+    top: -0.5em;
+    width: 1.5em;
+    text-align: center;
+    font-size: 2.5em; }
+  .horizontal-graph .home-team .bar-value {
+    right: -1.6em; }
+  .horizontal-graph .away-team .bar-value {
+    left: -1.6em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Horizontal graph with names
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Horizontal graph
+
+	=======================================================  */
+.horizontal-graph--names {
+  height: 17.5em; }
+  .horizontal-graph--names .player-first-name,
+  .horizontal-graph--names .player-second-name {
+    position: relative;
+    text-align: center; }
+  .horizontal-graph--names .player-first-name {
+    top: 2em;
+    font-size: 1.4em; }
+  .horizontal-graph--names .player-second-name {
+    top: 1.2em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* horizontal graph with name/value pairs
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Horizontal graphs with name/value pairs
+
+	=======================================================  */
+.horizontal-graph--name-value-pairs .total-label,
+.horizontal-graph--name-value-pairs .total-value--wrap {
+  text-align: center; }
+.horizontal-graph--name-value-pairs .total-label,
+.horizontal-graph--name-value-pairs .total-value--unit-of-measure {
+  font-size: 2em; }
+.horizontal-graph--name-value-pairs .total-value {
+  font-size: 4em; }
+.horizontal-graph--name-value-pairs .total-value--unit-of-measure {
+  margin-left: -.2em; }
+.horizontal-graph--name-value-pairs .value-label {
+  font-size: 1.3em; }
+.horizontal-graph--name-value-pairs .list-value > li {
+  position: relative;
+  clear: left;
+  padding: 1em;
+  margin: 0 1em; }
+.horizontal-graph--name-value-pairs .bar--wrap {
+  top: 4.2em; }
+.horizontal-graph--name-value-pairs.home-team .numeric-value {
+  float: left; }
+.horizontal-graph--name-value-pairs.home-team .bar--wrap {
+  left: 6.2em;
+  right: 1em; }
+.horizontal-graph--name-value-pairs.away-team .value-label {
+  text-align: right; }
+.horizontal-graph--name-value-pairs.away-team .list-value > li {
+  clear: right; }
+.horizontal-graph--name-value-pairs.away-team .numeric-value {
+  float: right; }
+.horizontal-graph--name-value-pairs.away-team .bar--wrap {
+  right: 6.2em;
+  left: 1em; }
+.horizontal-graph--name-value-pairs.away-team .bar {
+  right: 0;
+  left: auto; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Vertical graph
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Vertical graph
+
+	=======================================================  */
+.vertical-graph {
+  height: 22em; }
+  .vertical-graph .home-team,
+  .vertical-graph .away-team {
+    height: 15em; }
+  .vertical-graph .home-team .bar-value {
+    text-align: right;
+    margin-right: 2.5em; }
+  .vertical-graph .away-team .bar-value {
+    margin-left: 2.5em; }
+  .vertical-graph .bar-value-title {
+    margin: 1em 0; }
+  .vertical-graph .bar-value-overlay .numeric-value {
+    -webkit-mask: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Player card
+				- Back button
+				- Player card
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Player card
+
+	=======================================================  */
+.player-card--graph {
+  /* Back button */ }
+  .player-card--graph .back-btn--wrap {
+    position: absolute;
+    top: 0;
+    width: 3.2em;
+    height: 10.6em; }
+    .player-card--graph .back-btn--wrap .icon {
+      display: block;
+      width: 100%;
+      height: 5em;
+      position: relative;
+      top: 50%;
+      margin-top: -2.5em; }
+  .player-card--graph .player-img-wrap {
+    margin: 0 auto .3em;
+    width: 10.6em;
+    height: 10.6em;
+    position: relative;
+    -webkit-mask: url(../img/playerMask.svg) top left/cover; }
+  .player-card--graph .player-img-mask {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    bottom: 0.2em;
+    left: 0.2em;
+    background-size: cover;
+    -webkit-mask: url(../img/playerMask.svg) top left/cover; }
+  .player-card--graph .player-name {
+    text-align: center;
+    font-size: 2em; }
+  .player-card--graph .latest-event {
+    width: 5em;
+    height: 5em;
+    margin: 0 auto 1em; }
+  .player-card--graph .player-details .numeric-value {
+    font-size: 4em; }
+  .player-card--graph .player-details .stat-name {
+    display: block; }
+  .player-card--graph .player-details .icon {
+    display: block;
+    width: 5em;
+    height: 5em;
+    position: relative;
+    top: 0.3em; }
+
+.home-team.player-card--graph .back-btn--wrap {
+  left: 2em; }
+  .home-team.player-card--graph .back-btn--wrap .icon {
+    right: 0.8em; }
+.home-team.player-card--graph .player-details .icon {
+  float: right; }
+
+.away-team.player-card--graph .back-btn--wrap {
+  right: 2em; }
+  .away-team.player-card--graph .back-btn--wrap .icon {
+    -webkit-transform: rotate(180deg);
+    left: 0.8em; }
+.away-team.player-card--graph .stat-name,
+.away-team.player-card--graph .stat-detail {
+  text-align: right; }
+.away-team.player-card--graph .player-details .icon {
+  float: left; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Lineup graph
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Lineup graph
+
+	=======================================================  */
+.lineup-graph .team-logo {
+  position: relative;
+  top: 1em; }
+.lineup-graph .team-name {
+  margin-bottom: .3em; }
+.lineup-graph .players-stats--list > li {
+  height: 7em; }
+  .lineup-graph .players-stats--list > li > a {
+    display: block;
+    overflow: hidden; }
+  .lineup-graph .players-stats--list > li > a,
+  .lineup-graph .players-stats--list > li .numeric-value {
+    height: inherit; }
+  .lineup-graph .players-stats--list > li .numeric-value {
+    padding-top: 0.2em;
+    font-size: 4em; }
+  .lineup-graph .players-stats--list > li .value-label {
+    position: relative;
+    top: 0.2em; }
+  .lineup-graph .players-stats--list > li .icon-wrap {
+    display: block;
+    margin-top: 3.2em;
+    position: relative; }
+  .lineup-graph .players-stats--list > li .icon {
+    display: block;
+    width: 3em;
+    height: 3em; }
+.lineup-graph.home-team .team-logo {
+  float: left;
+  margin-right: 1em; }
+.lineup-graph.home-team .icon-wrap {
+  left: -0.6em; }
+.lineup-graph.home-team .icon {
+  float: left; }
+.lineup-graph.away-team .team-logo {
+  float: right;
+  margin-left: 1em; }
+.lineup-graph.away-team .team-name {
+  text-align: right; }
+.lineup-graph.away-team .icon-wrap {
+  right: -0.6em; }
+.lineup-graph.away-team .icon {
+  float: right; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Common style
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+/* Wrap */
+/* Row */
+/* Row separator */
+/* Home/away rows */
+/* Section title */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Formerly 24em in the PSD */
+/* Players/stats list */
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+/* Horizontal graph */
+/* Horizontal graph with name/value pairs */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Heat map graph */
+/* Circular graph */
+/* Player card graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Common style
+
+	=======================================================  */
+/* icon graphs */
+.icon-graph {
+  height: 11em; }
+  .icon-graph .home-team--row,
+  .icon-graph .away-team--row {
+    width: 14em;
+    margin: 0 1em;
+    text-align: center; }
+  .icon-graph .icon,
+  .icon-graph .numeric-value {
+    display: inline-block;
+    vertical-align: middle; }
+  .icon-graph .icon {
+    width: 5em;
+    height: 5em; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Main structure
+				- Body
+				- Row separator
+
+			* Home team color
+				- Trend indicator
+				- Trapezoid unit
+				- Bar graph
+				- Dodecagon player mask
+				- Vertical bar numeric value
+				- Horizontal graph with name/value pairs
+				- Circle chart
+
+			* Away team color
+				- Trend indicator
+				- Trapezoid unit
+				- Bar graph
+				- Dodecagon player mask
+				- Vertical bar numeric value
+				- Horizontal graph with name/value pairs
+				- Circle chart
+
+			* Nav
+
+			* Heat map
+				- Field
+				- Team tactic
+				- Lineup
+				- Field grid
+
+			* Horizontal graph with name/value pairs
+
+			* Player card
+				- Back button
+				- Player image
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Table of content
+
+			* Font declaration
+				- Base declaration
+				- Color declaration
+			
+			* @Font-face with style linking
+				- Brief
+				- Drawbacks
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+/* Body */
+/* Row separator */
+/* Home team */
+/* Away team */
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+/* Full size */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+/* Nav */
+/* Bar */
+/* Heat map */
+/* Circular graph */
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+/* Heat map */
+/* Circular graph */
+/* Horizontal graph */
+/* Horizontal graph with names */
+/* Vertical graph */
+/* Icon graph */
+/* Lineup graph */
+/*  =======================================================
+
+		Base font declaration
+
+	=======================================================  */
+/* Confused on what to use between px, em and rem? */
+/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+  font-size: 62.5%;
+  /* 62.5% = 1em = 10px */
+  line-height: 1.4;
+  font-family: oswaldlight, sans-serif;
+  color: white; }
+
+/* Setting font size for headings, paragraphs, blockquotes */
+h1 {
+  font-size: 3.2em; }
+
+h2 {
+  font-size: 2.4em; }
+
+h3 {
+  font-size: 1.3125em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 1em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  margin: 0; }
+
+/*  =======================================================
+
+		@Font-face with style linking
+
+	=======================================================  */
+@font-face {
+  font-family: 'oswaldbook';
+  src: url("../fonts/oswald-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'oswaldlight';
+  src: url("../fonts/oswald-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/* Additional classes for style linking */
+.heat-map .team-tactic li {
+  font-family: 'oswaldbook', arial, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+/*  =======================================================
+
+		Table of content
+
+	  		* Matrix
+
+	  		* Sprite
+
+			* Icons position
+
+	======================================================= */
+/*  =======================================================
+
+		Matrix
+
+	======================================================= */
+/* Full size */
+/* Half size */
+/*  =======================================================
+
+		Sprite
+
+	======================================================= */
+/* Common style for all versions */
+.icon {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 5em 55em; }
+
+.icon.small-size {
+  background-size: 3em 30em; }
+
+/*  =======================================================
+
+		Icons position
+
+	======================================================= */
+/* Full size */
+.icon.ball {
+  background-position: 0em 0em; }
+
+.icon.assist {
+  background-position: 0em -5em; }
+
+.icon.shoe {
+  background-position: 0em -10em; }
+
+.icon.whistle {
+  background-position: 0em -15em; }
+
+.icon.flag {
+  background-position: 0em -20em; }
+
+.icon.yellow-hand {
+  background-position: 0em -25em; }
+
+.icon.substitution {
+  background-position: 0em -30em; }
+
+.icon.ball-small {
+  background-position: 0em -35em; }
+
+.icon.yellow-card {
+  background-position: 0em -40em; }
+
+.icon.back-btn {
+  background-position: 0em -45em; }
+
+.icon.red-hand {
+  background-position: 0em -50em; }
+
+/* Half size */
+.small-size.icon.ball {
+  background-position: 0em 0em; }
+.small-size.icon.assist {
+  background-position: 0em -2.7em; }
+.small-size.icon.shoe {
+  background-position: 0em -5.4em; }
+.small-size.icon.whistle {
+  background-position: 0em -8.1em; }
+.small-size.icon.flag {
+  background-position: 0em -10.8em; }
+.small-size.icon.yellow-hand {
+  background-position: 0em -13.5em; }
+.small-size.icon.substitution {
+  background-position: 0em -16.2em; }
+.small-size.icon.ball-small {
+  background-position: 0em -18.9em; }
+.small-size.icon.yellow-card {
+  background-position: 0em -21.6em; }
+.small-size.icon.back-btn {
+  background-position: 0em -24.3em; }
+.small-size.icon.red-hand {
+  background-position: 0em -27em; }
+
+/*  ======================================================
+
+		Main structure
+
+	======================================================  */
+/* Body */
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white; }
+
+/* Row separator */
+.row::before {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.numeric-value {
+  font-size: 3em; }
+
+/*  ======================================================
+
+		Home team color
+
+	======================================================  */
+/* Trend indicator */
+.home-team .trend-indicator::before,
+.home-team .trapezoid-unit::before,
+.home-team .bar,
+.home-team--full-width .bar,
+.player-card .home-player.player-img-wrap {
+  background-color: yellow; }
+
+/* Vertical bar numeric value */
+.vertical-graph .home-team .numeric-value,
+.horizontal-graph--name-value-pairs.home-team--full-width .total-value--wrap {
+  color: yellow; }
+
+/* Circle chart */
+.circle-graph .home-team .circle-unit {
+  border-color: yellow; }
+
+/*  ======================================================
+
+		Away team color
+
+	======================================================  */
+/* Trend indicator */
+.away-team .trend-indicator::before,
+.away-team .trapezoid-unit::before,
+.away-team .bar,
+.away-team--full-width .bar,
+.player-card .away-player.player-img-wrap {
+  background-color: red; }
+
+/* Vertical bar numeric value */
+.vertical-graph .away-team .numeric-value,
+.horizontal-graph--name-value-pairs.away-team--full-width .total-value--wrap {
+  color: red; }
+
+/* Circle chart */
+.circle-graph .away-team .circle-unit {
+  border-color: red; }
+
+/*  ======================================================
+
+		Nav
+
+	======================================================  */
+.nav {
+  border-bottom-color: rgba(255, 255, 255, 0.1); }
+  .nav > li::after {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .nav > li > a {
+    color: rgba(255, 255, 255, 0.5); }
+  .nav > li > .selected {
+    color: white; }
+
+/*  ======================================================
+
+		Heat map
+
+	======================================================  */
+/* Field */
+.heat-map .field {
+  border-style: solid;
+  border-color: #515152;
+  background: -webkit-linear-gradient(top, rgba(20, 20, 20, 0.3) 0%, rgba(20, 20, 20, 0.3) 5%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 10%, rgba(20, 20, 20, 0.3) 10%, rgba(20, 20, 20, 0.3) 15%, rgba(0, 0, 0, 0.3) 15%, rgba(0, 0, 0, 0.3) 20%, rgba(20, 20, 20, 0.3) 20%, rgba(20, 20, 20, 0.3) 25%, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 30%, rgba(20, 20, 20, 0.3) 30%, rgba(20, 20, 20, 0.3) 35%, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.3) 40%, rgba(20, 20, 20, 0.3) 40%, rgba(20, 20, 20, 0.3) 45%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.3) 50%, rgba(20, 20, 20, 0.3) 50%, rgba(20, 20, 20, 0.3) 55%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.3) 60%, rgba(20, 20, 20, 0.3) 60%, rgba(20, 20, 20, 0.3) 65%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.3) 70%, rgba(20, 20, 20, 0.3) 70%, rgba(20, 20, 20, 0.3) 75%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 80%, rgba(20, 20, 20, 0.3) 80%, rgba(20, 20, 20, 0.3) 85%, rgba(0, 0, 0, 0.3) 85%, rgba(0, 0, 0, 0.3) 90%, rgba(20, 20, 20, 0.3) 90%, rgba(20, 20, 20, 0.3) 95%, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%); }
+  .heat-map .field::before {
+    background-color: #515152; }
+
+/* Team tactic */
+.team-tactic .active::before {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.home-team .team-tactic li {
+  background-color: yellow;
+  color: black; }
+
+.away-team .team-tactic li {
+  background-color: red;
+  color: white; }
+
+/* Field grid */
+.field-grid .value-1 {
+  background-color: yellow;
+  opacity: .2; }
+.field-grid .value-2 {
+  background-color: #ecea03;
+  opacity: .4; }
+.field-grid .value-3 {
+  background-color: #ebd702;
+  opacity: .6; }
+.field-grid .value-4 {
+  background-color: #e4bc03;
+  opacity: .8; }
+.field-grid .value-5 {
+  background-color: #e09903; }
+.field-grid .value-6 {
+  background-color: #d96c02; }
+.field-grid .value-7 {
+  background-color: #d14403; }
+.field-grid .value-8 {
+  background-color: #cc1e03; }
+.field-grid .value-9 {
+  background-color: #d60b03; }
+.field-grid .value-10 {
+  background-color: #d60b03; }
+
+.field-grid.blurred [class^="value-"] {
+  -webkit-filter: blur(7px); }
+.field-grid.blurred .value-1 {
+  box-shadow: 0 0 3px yellow; }
+.field-grid.blurred .blurred .value-2 {
+  box-shadow: 0 0 3px #ecea03; }
+.field-grid.blurred .blurred .value-3 {
+  box-shadow: 0 0 3px #ebd702; }
+.field-grid.blurred .blurred .value-4 {
+  box-shadow: 0 0 3px #e4bc03; }
+.field-grid.blurred .blurred .value-5 {
+  box-shadow: 0 0 3px #e09903; }
+.field-grid.blurred .blurred .value-6 {
+  box-shadow: 0 0 3px #d96c02; }
+.field-grid.blurred .blurred .value-7 {
+  box-shadow: 0 0 3px #d14403; }
+.field-grid.blurred .blurred .value-8 {
+  box-shadow: 0 0 3px #cc1e03; }
+.field-grid.blurred .blurred .value-9 {
+  background-color: #d60b03; }
+.field-grid.blurred .blurred .value-10 {
+  box-shadow: 0 0 3px #d60b03; }
+
+/* Lineup */
+.players-stats--list > li {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1); }
+.players-stats--list .numeric-value::after {
+  background-color: rgba(255, 255, 255, 0.1); }
+.players-stats--list .value-label {
+  color: rgba(255, 255, 255, 0.5); }
+
+.home-team .players-stats--list .numeric-value {
+  color: yellow; }
+
+.away-team .players-stats--list .numeric-value {
+  color: red; }
+
+/*  ======================================================
+
+		Horizontal graph with name/value pairs
+
+	======================================================  */
+.horizontal-graph--name-value-pairs .list-value > li {
+  border-width: 1px 0 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1); }
+.horizontal-graph--name-value-pairs.home-team .total-value--wrap {
+  color: yellow; }
+.horizontal-graph--name-value-pairs.away-team .total-value--wrap {
+  color: red; }
+
+/*  ======================================================
+
+		Player card
+
+	======================================================  */
+.player-card--graph {
+  /* Back button */ }
+  .player-card--graph .back-btn--wrap {
+    background: rgba(255, 255, 255, 0.1); }
+
+.home-team.player-card--graph {
+  /* Player image */ }
+  .home-team.player-card--graph .player-img-wrap {
+    background-color: yellow; }
+
+.away-team.player-card--graph {
+  /* Player image */ }
+  .away-team.player-card--graph .player-img-wrap {
+    background-color: red; }
+
+/*  =======================================================
+
+		Dev style
+
+	=======================================================  */

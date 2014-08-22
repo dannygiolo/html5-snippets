@@ -1,0 +1,79 @@
+/*  =======================================================
+
+		Table of Content
+
+			* Imports
+
+	    	* Nav
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Nav
+
+	=======================================================  */
+
+
+.nav {
+	@extend %horizontal-list;
+	height: $nav--height;
+	line-height: $nav--height;
+	text-align: center;
+
+	> li {
+		width: $nav-li--width;
+		position: relative;
+	}
+
+	> li::after {
+		content: "";
+		position: absolute;
+		top: $nav-li-separator--offset;
+		left: 0;
+		bottom: $nav-li-separator--offset;
+		width: $nav-li-border--width;
+	}
+
+	> li:first-child::after {
+		display: none;
+	}
+
+	> li > a {
+		display: block;
+		font-size: $nav-links--font-size;
+	}
+
+	> li > a > span {
+	    padding-bottom: $nav-links--padding-bottom;
+	    border-width: 0 0 $nav-li-border--width;
+	    border-style: solid;
+	    border-bottom-color: transparent;   
+	}
+}
+
+
+/* Tabs nav */
+.tabs-nav {
+	border-bottom-width: $nav-li-border--width;
+	border-bottom-style: solid;
+}

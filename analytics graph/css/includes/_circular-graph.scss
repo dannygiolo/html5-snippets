@@ -1,0 +1,151 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Circular graphs
+				- Section dimensions
+				- Numeric value
+				- Trend indicator
+				- Circular element
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Circular graphs
+
+	=======================================================  */
+
+/* Section dimensions */
+.circular-graph {
+	height: $circular-graph--height;
+}
+
+.circular-graph--names {
+	height: $circular-graph-names--height;
+}
+
+.circular-graph {
+	/* Numeric value in circular graphs */
+	.circular-graph--value {
+		position: absolute;
+		top: 1.5em;
+		left: 0;
+		right: 0;
+		font-size: $circular-graph-value--font-size;
+		text-align: center;
+
+		> sup {
+			font-size: $circular-graph-value-sup--font-size;
+			position: relative;
+			top: $circular-graph-value-sup--offset;
+			right: $circular-graph-value-sup--offset;
+		}
+	}
+
+	.home-team .circular-graph--value {
+		left: 1.8em;
+	}
+
+	.away-team .circular-graph--value {
+		right: 1.2em;
+	}
+
+	/* Trend indicator in circular graphs */
+	.trend-indicator {
+		position: absolute;
+		width: $trend-indicator--width;
+		height: $trend-indicator--height;
+		top: $trend-indicator--top-offset;
+
+		&.negative-trend {
+			-webkit-transform: rotate(180deg);
+		}
+	}
+
+	.trend-indicator::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		/* Mask for striped background */
+		-webkit-mask: url(../img/triangleMask.svg) top left / cover;
+
+		/* Triggering 3d transform for better antialiasing */
+		-webkit-transform: translate3d( 0, 0, 0)
+	}
+
+	.home-team .trend-indicator {
+		left: -.5em;
+	}
+
+	.away-team .trend-indicator {
+		right: -.5em;
+	}
+}
+
+
+
+
+
+/*  =======================================================
+
+		Circular graphs with names
+
+	=======================================================  */
+
+.circular-graph--names {
+
+	.player-first-name,
+	.player-second-name {
+		text-align: center;
+		position: relative;
+	}
+
+	.player-first-name {
+		margin: 0;
+		top: $circular-graph-player-first-name--top-offset;
+		font-size: $circular-graph-player-first-name--font-size;
+	}
+
+	.player-second-name {
+		width: 7em;
+		top: $circular-graph-player-second-name--top-offset;
+		font-size: $circular-graph-player-second-name--font-size;
+	}
+
+	.home-team .player-first-name {
+		left: 1.2em;
+	}
+
+	.away-team .player-first-name {
+		right: 1.2em;
+	}
+
+	.away-team .player-second-name {
+		right: 1.8em;
+	}
+}

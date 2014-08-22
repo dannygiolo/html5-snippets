@@ -1,0 +1,87 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Main Structure
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '_variables-layout';
+
+
+
+
+
+
+/*  =======================================================
+
+		Main Structure
+
+	=======================================================  */
+
+/* Wrap */
+.wrap {
+	width: $wrap--width;
+	margin: 0 auto;
+}
+
+/* Row */
+.row {
+	position: relative;
+	margin: $row--margin;
+	overflow: hidden;
+}
+
+/* Row separator */
+.row::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: $row-separator--margin;
+	right: $row-separator--margin;
+	height: 1px;
+}
+
+.row:last-child::before {
+	display: none;
+}
+
+/* Home/away rows */
+.home-team--row,
+.away-team--row {
+	position: relative;
+	width: $home-away-team-row--width;
+	margin: $home-away-team-row--margin;
+}
+
+.home-team--row {
+	float: left;
+}
+
+.away-team--row {
+	float: right;
+}
+
+/* Section title */
+.section-title {
+	text-align: center;
+	margin: $section-title--margin;
+}

@@ -1,0 +1,52 @@
+/*  =======================================================
+
+		Table of content
+
+			* Z-index maps
+
+			* Hiding classes
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Z-index maps
+
+	=======================================================  */
+
+/* Warning: if this break the compiler, please substitute the proper z-index value in the proper selector */
+$heat-map--zindex: (
+	player		: 1000,
+	heat-map	: 800,
+	field-lines	: 600
+);
+
+
+
+
+
+
+/*  =======================================================
+
+		Hiding classes
+
+	=======================================================  */
+
+.remove {
+	display: none !important;
+}
+
+/* Accessible by screen reader */
+.hide {
+	position: absolute !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0!important;
+	overflow: hidden !important;
+	border: none !important;
+}

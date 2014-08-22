@@ -1,0 +1,58 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Common style
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Common style
+
+	=======================================================  */
+
+/* icon graphs */
+.icon-graph {
+    height: $icon-graph--height;
+
+    .home-team--row,
+	.away-team--row {
+	    width: $icon-graph-team-row--width;
+	    margin: $icon-graph-team-row--margin;
+	    text-align: center;
+	}
+
+	.icon,
+	.numeric-value {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.icon {
+		width: $icon-graph-icon--width;
+		height: $icon-graph-icon--height;
+	}
+}

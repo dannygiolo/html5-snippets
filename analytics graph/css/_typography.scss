@@ -1,0 +1,114 @@
+/*  =======================================================
+
+		Table of content
+
+			* Font declaration
+				- Base declaration
+				- Color declaration
+			
+			* @Font-face with style linking
+				- Brief
+				- Drawbacks
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '_variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Base font declaration
+
+	=======================================================  */
+
+/* Confused on what to use between px, em and rem? */
+/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+	font-size: $font-size; /* 62.5% = 1em = 10px */
+	line-height: $line-height;
+	font-family: $font-stacking;
+	color: $body-copy--color;
+}
+
+/* Setting font size for headings, paragraphs, blockquotes */
+h1 {
+	font-size: $h1--font-size;
+}
+
+h2 {
+	font-size: $h2--font-size;
+}
+
+h3 {
+	font-size: $h3--font-size;
+}
+
+h4 {
+	font-size: $h4--font-size;
+}
+
+h5 {
+	font-size: $h5--font-size;
+}
+
+h6 {
+	font-size: $h6--font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $body-copy--color;
+  margin: 0;
+}
+
+
+
+
+
+/*  =======================================================
+
+		@Font-face with style linking
+
+	=======================================================  */
+
+@font-face {
+	font-family: 'oswaldbook';
+	src: url('../fonts/oswald-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'oswaldlight';
+	src: url('../fonts/oswald-light-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+/* Additional classes for style linking */
+
+%oswald--400 {
+	font-family: 'oswaldbook', arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}

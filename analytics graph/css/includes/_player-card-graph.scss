@@ -1,0 +1,141 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Player card
+				- Back button
+				- Player card
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Player card
+
+	=======================================================  */
+
+.player-card--graph {
+
+	/* Back button */
+	.back-btn--wrap {
+		position: absolute;
+		top: 0;
+		width: $back-btn--width;
+		height: $player-img--radius;
+
+		.icon {
+			display: block;
+			width: 100%;
+			height: $back-btn-icon--height;
+			position: relative;
+			top: 50%;
+			margin-top: -($back-btn-icon--height / 2);
+		}
+	}
+
+	.player-img-wrap {
+		margin: 0 auto .3em;
+		width: $player-img--radius;
+		height: $player-img--radius;
+		position: relative;
+		-webkit-mask: url(../img/playerMask.svg) top left / cover;
+	}
+
+	.player-img-mask {
+		position: absolute;
+		top: $player-img--border;
+		right: $player-img--border;
+		bottom: $player-img--border;
+		left: $player-img--border;
+		background-size: cover;
+		-webkit-mask: url(../img/playerMask.svg) top left / cover;
+	}
+
+	.player-name {
+		text-align :center;
+		font-size: $player-img-name--font-size;
+	}
+
+	.latest-event {
+		width: $player-img-last-event--width;
+		height: $player-img-last-event--height;
+		margin: 0 auto $player-img-last-event--margin-bottom;
+	}
+
+	.player-details {
+
+		.numeric-value {
+			font-size: $player-details-numeric-value--font-size;
+		}
+
+		.stat-name {
+			display: block;
+		}
+
+		.icon {
+			display: block;
+			width: $player-details-icon--width;
+			height: $player-details-icon--width;
+			position: relative;
+			top: $player-details-icon--top-offset;
+		}
+	}
+}
+
+
+.home-team.player-card--graph {
+
+	.back-btn--wrap {
+		left: $back-btn--margin;
+
+		.icon {
+			right: $back-btn-icon--offset;
+		}
+	}
+
+	.player-details .icon {
+		float: right;
+	}
+}
+
+.away-team.player-card--graph {
+
+	.back-btn--wrap {
+		right: $back-btn--margin;
+		
+		.icon {
+			-webkit-transform: rotate(180deg);
+			left: $back-btn-icon--offset;
+		}
+	}
+
+	.stat-name,
+	.stat-detail {
+		text-align: right;
+	}
+
+	.player-details .icon {
+		float: left;
+	}
+}

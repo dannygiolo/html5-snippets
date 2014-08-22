@@ -1,0 +1,57 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Horizontal graph
+				- Bar value
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Horizontal graph
+
+	=======================================================  */
+
+.horizontal-graph {
+	height: $horizontal-graph--height;
+
+	/* Bar value */
+	.bar-value {
+		position: absolute;
+		top: $horizontal-graph-value--top-offset;
+	    width: $horizontal-graph--value-width;
+	    text-align: center;
+	    font-size: $horizontal-graph-value--font-size;
+	}
+
+	.home-team .bar-value {
+		right: $horizontal-graph-value--horizontal-offset;
+	}
+
+	.away-team .bar-value {
+		left: $horizontal-graph-value--horizontal-offset;
+	}
+}

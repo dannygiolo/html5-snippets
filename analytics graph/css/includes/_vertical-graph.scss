@@ -1,0 +1,61 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Vertical graph
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Vertical graph
+
+	=======================================================  */
+
+.vertical-graph {
+	height: $vertical-graph--height;
+
+	.home-team,
+	.away-team {
+		height: $vertical-graph-home-away-team--height;
+	}
+
+	.home-team .bar-value {
+		text-align: right;
+		margin-right: $vertical-graph-bar-value--horizontal-margin;
+	}
+
+	.away-team .bar-value {
+		margin-left: $vertical-graph-bar-value--horizontal-margin;
+	}
+
+	.bar-value-title {
+		margin: $vertical-graph-bar-value-title--margin;	
+	}
+
+	.bar-value-overlay .numeric-value {
+		-webkit-mask: $vertical-graph-numerica-value--mask;
+	}
+}

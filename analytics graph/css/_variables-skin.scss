@@ -1,0 +1,229 @@
+/*  =======================================================
+
+		Table of Content
+
+			* Palette
+				- Body
+				- Row separator
+				- Home team
+				- Away team
+
+			* Icons
+
+			* Typography
+
+			* Components
+				- Bar
+				- Nav
+				- Heat map
+
+			* Includes
+				- Heat map
+				- Circular graph
+				- Horizontal graph
+				- Icon graph
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+
+/* Body */
+$body-copy--color: #fff;
+$body--background-color: rgba(0,0,0,.8);
+
+/* Row separator */
+$row-separator--color: rgba(255,255,255,.1);
+
+/* Home team */
+$home-team--color: yellow;
+
+/* Away team */
+$away-team--color: red;
+
+
+
+
+
+/*  =======================================================
+
+		Icons
+
+	=======================================================  */
+
+/* Full size */
+$full-size-sprite-grid--width: 5em;
+$small-size-sprite-grid--width: 2.7em;
+
+
+
+
+
+
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+
+$font-size: 62.5%;
+
+$line-height: 1.4;
+
+$font-stacking: oswaldlight, sans-serif;
+
+$h1--font-size: 3.2em;
+$h2--font-size: 2.4em;
+$h3--font-size: 1.3125em;
+$h4--font-size: 1.125em;
+$h5--font-size: 1em;
+$h6--font-size: 1em;
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+
+/* Nav */
+$nav-border-bottom--color: rgba(255,255,255,.1);
+$nav-separator--color: $nav-border-bottom--color;
+$nav-links--color: rgba(255,255,255,.5);
+$nav-links--font-size: 1.6em;
+$nav-active-links--color: $body-copy--color;
+
+
+/* Bar */
+$bar--background-image: url(../img/verticalMask.png);
+
+$bar-overlay--color: rgba(0,0,0,.2);
+
+
+/* Heat map */
+$heat-map--border-color: #515152;
+$heat-map-field--background-stripes: -webkit-linear-gradient(top,
+											hsla(0,0%,8%,.3) 0%,
+											hsla(0,0%,8%,.3) 5%,
+											hsla(0,0%,0%,.3) 5%,
+											hsla(0,0%,0%,.3) 10%,
+											hsla(0,0%,8%,.3) 10%,
+											hsla(0,0%,8%,.3) 15%,
+											hsla(0,0%,0%,.3) 15%,
+											hsla(0,0%,0%,.3) 20%,
+											hsla(0,0%,8%,.3) 20%,
+											hsla(0,0%,8%,.3) 25%,
+											hsla(0,0%,0%,.3) 25%,
+											hsla(0,0%,0%,.3) 30%,
+											hsla(0,0%,8%,.3) 30%,
+											hsla(0,0%,8%,.3) 35%,
+											hsla(0,0%,0%,.3) 35%,
+											hsla(0,0%,0%,.3) 40%,
+											hsla(0,0%,8%,.3) 40%,
+											hsla(0,0%,8%,.3) 45%,
+											hsla(0,0%,0%,.3) 45%,
+											hsla(0,0%,0%,.3) 50%,
+											hsla(0,0%,8%,.3) 50%,
+											hsla(0,0%,8%,.3) 55%,
+											hsla(0,0%,0%,.3) 55%,
+											hsla(0,0%,0%,.3) 60%,
+											hsla(0,0%,8%,.3) 60%,
+											hsla(0,0%,8%,.3) 65%,
+											hsla(0,0%,0%,.3) 65%,
+											hsla(0,0%,0%,.3) 70%,
+											hsla(0,0%,8%,.3) 70%,
+											hsla(0,0%,8%,.3) 75%,
+											hsla(0,0%,0%,.3) 75%,
+											hsla(0,0%,0%,.3) 80%,
+											hsla(0,0%,8%,.3) 80%,
+											hsla(0,0%,8%,.3) 85%,
+											hsla(0,0%,0%,.3) 85%,
+											hsla(0,0%,0%,.3) 90%,
+											hsla(0,0%,8%,.3) 90%,
+											hsla(0,0%,8%,.3) 95%,
+											hsla(0,0%,0%,.3) 95%,
+											hsla(0,0%,0%,.3) 100%);
+
+$heat-map-player--active-state-background-color: rgba(255,255,255,.3);
+$home-team-player-heat-map--color: #000;
+$away-team-player-heat-map--color: #fff;
+
+$heat-map-value-1--color: #ff0;
+$heat-map-value-2--color: #ecea03;
+$heat-map-value-3--color: #ebd702;
+$heat-map-value-4--color: #e4bc03;
+$heat-map-value-5--color: #e09903;
+$heat-map-value-6--color: #d96c02;
+$heat-map-value-7--color: #d14403;
+$heat-map-value-8--color: #cc1e03;
+$heat-map-value-9--color: #d60b03;
+$heat-map-value-10--color: #d60b03;
+
+
+/* Circular graph */
+$trapezoid-unit--background-image: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,.2) 0%,hsla(0,0%,0%,0) 100%);
+
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Includes
+
+	=======================================================  */
+
+/* Heat map */
+$players-stats-list-player-name--font-size: 2em;
+
+
+/* Circular graph */
+$circular-graph-value--font-size: 2.4em;
+$circular-graph-value-sup--font-size: .6em;
+
+$circular-graph-player-first-name--font-size: 1.5em;
+$circular-graph-player-second-name--font-size: 1.9em;
+
+
+/* Horizontal graph */
+$horizontal-graph-value--font-size: 2.5em;
+
+$horizontal-graph-name-value-pairs-total-value-unit-of-measure--font-size: 2em;
+$horizontal-graph-name-value-pairs-total-value--font-size: 4em;
+$horizontal-graph-name-value-pairs-value-label--font-size: 1.3em;
+
+
+/* Horizontal graph with names */
+$horizontal-graph-player-first-name--font-size: 1.4em;
+
+
+/* Vertical graph */
+$vertical-graph-numerica-value--mask: -webkit-linear-gradient(-45deg,  hsla(0,0%,0%,.5) 0%,hsla(0,0%,0%,.5) 100%);
+
+
+/* Icon graph */
+$icon-graph--height: 11em;
+$icon-graph-team-row--width: 14em;
+$icon-graph-team-row--margin: 0 1em;
+$icon-graph-icon--width: 5em;
+$icon-graph-icon--height: 5em;
+
+
+/* Lineup graph */
+$lineup-graph-numeric-value--font-size: 4em;

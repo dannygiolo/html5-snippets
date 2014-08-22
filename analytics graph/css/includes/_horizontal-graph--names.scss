@@ -1,0 +1,54 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Horizontal graph with names
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Horizontal graph
+
+	=======================================================  */
+
+.horizontal-graph--names {
+	height: $horizontal-graph--names-height;
+
+	.player-first-name,
+	.player-second-name {
+		position: relative;
+		text-align: center;
+	}
+
+	.player-first-name {
+		top: $horizontal-graph-player-first-name--top-offset;
+		font-size: $horizontal-graph-player-first-name--font-size;
+	}
+
+	.player-second-name {
+		top: $horizontal-graph-player-second-name--top-offset;
+	}
+}

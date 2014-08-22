@@ -1,0 +1,108 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* horizontal graph with name/value pairs
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Horizontal graphs with name/value pairs
+
+	=======================================================  */
+
+.horizontal-graph--name-value-pairs {
+	
+
+	.total-label,
+	.total-value--wrap {
+		text-align: center;
+	}
+
+	.total-label,
+	.total-value--unit-of-measure {
+		font-size: $horizontal-graph-name-value-pairs-total-value-unit-of-measure--font-size;
+	}
+
+	.total-value {
+		font-size: $horizontal-graph-name-value-pairs-total-value--font-size;
+	}
+
+	.total-value--unit-of-measure {
+		margin-left: -.2em;
+	}
+
+	.value-label {
+		font-size: $horizontal-graph-name-value-pairs-value-label--font-size;
+	}
+
+	.list-value > li {
+		position: relative;
+		clear: left;
+		padding: $horizontal-graph-name-value-pairs-li--padding;
+		margin: $horizontal-graph-name-value-pairs-li--margin;
+	}
+
+	.bar--wrap {
+		top: $horizontal-graph-name-value-pairs-bar--top-offset;
+	}
+
+	&.home-team {
+
+		.numeric-value {
+			float: left;
+		}
+
+		.bar--wrap {
+			left: $horizontal-graph-name-value-pairs-bar--start-offset;
+			right: $horizontal-graph-name-value-pairs-bar--end-offset;
+		}
+	}
+
+	&.away-team {
+
+		.value-label {
+			text-align: right;
+		}
+
+		.list-value > li {
+			clear: right;
+		}
+
+		.numeric-value {
+			float: right;
+		}
+
+		.bar--wrap {
+			right: $horizontal-graph-name-value-pairs-bar--start-offset;
+			left: $horizontal-graph-name-value-pairs-bar--end-offset;
+		}
+
+		.bar {
+			right: 0;
+			left: auto;
+		}
+	}
+}

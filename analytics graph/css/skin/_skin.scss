@@ -1,0 +1,403 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Main structure
+				- Body
+				- Row separator
+
+			* Home team color
+				- Trend indicator
+				- Trapezoid unit
+				- Bar graph
+				- Dodecagon player mask
+				- Vertical bar numeric value
+				- Horizontal graph with name/value pairs
+				- Circle chart
+
+			* Away team color
+				- Trend indicator
+				- Trapezoid unit
+				- Bar graph
+				- Dodecagon player mask
+				- Vertical bar numeric value
+				- Horizontal graph with name/value pairs
+				- Circle chart
+
+			* Nav
+
+			* Heat map
+				- Field
+				- Team tactic
+				- Lineup
+				- Field grid
+
+			* Horizontal graph with name/value pairs
+
+			* Player card
+				- Back button
+				- Player image
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '_variables-skin';
+@import '_typography';
+@import '_icons';
+
+
+
+
+
+/*  ======================================================
+
+		Main structure
+
+	======================================================  */
+
+/* Body */
+body {
+	background-color: $body--background-color;
+	color: $body-copy--color;
+}
+
+/* Row separator */
+.row::before {
+	background-color: $row-separator--color;
+}
+
+.numeric-value {
+	font-size: 3em;
+}
+
+
+
+
+
+
+/*  ======================================================
+
+		Home team color
+
+	======================================================  */
+
+/* Trend indicator */
+.home-team .trend-indicator::before,
+
+/* Trapezoid unit */
+.home-team .trapezoid-unit::before,
+
+/* Bar graph */
+.home-team .bar,
+.home-team--full-width .bar,
+
+/* Dodecagon player mask */
+.player-card .home-player.player-img-wrap {
+	background-color: $home-team--color;
+}
+
+/* Vertical bar numeric value */
+.vertical-graph .home-team .numeric-value,
+
+/* Horizontal graph with name/value pairs */
+.horizontal-graph--name-value-pairs.home-team--full-width .total-value--wrap {
+    color: $home-team--color;
+}
+
+/* Circle chart */
+.circle-graph .home-team .circle-unit {
+	border-color: $home-team--color;
+}
+
+
+
+
+
+/*  ======================================================
+
+		Away team color
+
+	======================================================  */
+
+/* Trend indicator */
+.away-team .trend-indicator::before,
+
+/* Trapezoid unit */
+.away-team .trapezoid-unit::before,
+
+/* Bar graph */
+.away-team .bar,
+.away-team--full-width .bar,
+
+/* Dodecagon player mask */
+.player-card .away-player.player-img-wrap {
+	background-color: $away-team--color;
+}
+
+/* Vertical bar numeric value */
+.vertical-graph .away-team .numeric-value,
+
+/* Horizontal graph with name/value pairs */
+.horizontal-graph--name-value-pairs.away-team--full-width .total-value--wrap {
+	color: $away-team--color;
+}
+
+/* Circle chart */
+.circle-graph .away-team .circle-unit {
+	border-color: $away-team--color;
+}
+
+
+
+
+
+
+/*  ======================================================
+
+		Nav
+
+	======================================================  */
+
+.nav {
+	border-bottom-color: $nav-border-bottom--color;
+
+	> li::after {
+		background-color: $nav-border-bottom--color;
+	}
+	
+	> li > a {
+		color: $nav-links--color;
+	}
+
+	> li > .selected {
+		color: $nav-active-links--color;
+	}
+}
+
+
+
+
+
+
+/*  ======================================================
+
+		Heat map
+
+	======================================================  */
+
+/* Field */
+.heat-map .field {
+	border-style: solid;
+	border-color: $heat-map--border-color;
+	background: $heat-map-field--background-stripes;
+
+	&::before {
+		background-color: $heat-map--border-color;
+	}
+}
+
+/* Team tactic */
+.team-tactic .active::before {
+	background-color: $heat-map-player--active-state-background-color;
+}
+
+.home-team .team-tactic li {
+	background-color: $home-team--color;
+	color: $home-team-player-heat-map--color;
+}
+
+.away-team .team-tactic li {
+	background-color: $away-team--color;
+	color: $away-team-player-heat-map--color;
+}
+
+/* Field grid */
+.field-grid {
+
+	.value-1 {
+		background-color: $heat-map-value-1--color;
+		opacity: .2;
+	}
+
+	.value-2 {
+		background-color: $heat-map-value-2--color;
+		opacity: .4;
+	}
+
+	.value-3 {
+		background-color: $heat-map-value-3--color;
+		opacity: .6;
+	}
+
+	.value-4 {
+		background-color: $heat-map-value-4--color;
+		opacity: .8;
+	}
+
+	.value-5 {
+		background-color: $heat-map-value-5--color;
+	}
+
+	.value-6 {
+		background-color: $heat-map-value-6--color;
+	}
+
+	.value-7 {
+		background-color: $heat-map-value-7--color;
+	}
+
+	.value-8 {
+		background-color: $heat-map-value-8--color;
+	}
+
+	.value-9 {
+		background-color: $heat-map-value-9--color;
+	}
+
+	.value-10 {
+		background-color: $heat-map-value-9--color;
+	}
+}
+
+.field-grid.blurred {
+
+	[class^="value-"] {
+		-webkit-filter: blur(7px);
+	}
+	
+	.value-1 {
+		box-shadow: 0 0 3px $heat-map-value-1--color;	
+	}
+
+	.blurred .value-2 {
+		box-shadow: 0 0 3px $heat-map-value-2--color;	
+	}
+
+	.blurred .value-3 {
+		box-shadow: 0 0 3px $heat-map-value-3--color;	
+	}
+
+	.blurred .value-4 {
+		box-shadow: 0 0 3px $heat-map-value-4--color;	
+	}
+
+	.blurred .value-5 {
+		box-shadow: 0 0 3px $heat-map-value-5--color;
+	}
+
+	.blurred .value-6 {
+		box-shadow: 0 0 3px $heat-map-value-6--color;
+	}
+
+	.blurred .value-7 {
+		box-shadow: 0 0 3px $heat-map-value-7--color;
+	}
+
+	.blurred .value-8 {
+		box-shadow: 0 0 3px $heat-map-value-8--color;
+	}
+
+	.blurred .value-9 {
+		background-color: $heat-map-value-9--color;
+	}
+
+	.blurred .value-10 {
+		box-shadow: 0 0 3px $heat-map-value-9--color;
+	}
+}
+
+/* Lineup */
+.players-stats--list {
+
+	> li {
+		border-style: solid;
+		border-color: $row-separator--color;
+	}
+	
+	.numeric-value::after {
+		background-color: $row-separator--color;
+	}
+
+	.value-label {
+		color: $nav-links--color;
+	}
+}
+
+.home-team .players-stats--list .numeric-value {
+	color: $home-team--color;
+}
+
+.away-team .players-stats--list .numeric-value {
+	color: $away-team--color;
+}
+
+
+
+
+
+
+/*  ======================================================
+
+		Horizontal graph with name/value pairs
+
+	======================================================  */
+
+.horizontal-graph--name-value-pairs {
+	
+	.list-value > li {
+		border-width: $nav-li-border--width 0 0;
+		border-style: solid;
+		border-color: $row-separator--color;
+	}
+
+	&.home-team .total-value--wrap {
+		color: $home-team--color;	
+	}
+
+	&.away-team .total-value--wrap {
+		color: $away-team--color;
+	}
+}
+
+
+
+
+
+/*  ======================================================
+
+		Player card
+
+	======================================================  */
+
+.player-card--graph {
+	/* Back button */
+	.back-btn--wrap {
+		background: $row-separator--color;
+	}
+}
+
+.home-team.player-card--graph {
+	/* Player image */
+	.player-img-wrap {
+		background-color: $home-team--color;	
+	}
+}
+
+.away-team.player-card--graph {
+	/* Player image */
+	.player-img-wrap {
+		background-color: $away-team--color;		
+	}
+}

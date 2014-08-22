@@ -1,0 +1,113 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Bar
+				- Horizontal bar
+				- Vertical bar
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Bar
+
+	=======================================================  */
+
+.bar-graph {
+
+	.bar--wrap,
+	.background-bar,
+	.bar,
+	.bar-overlay {
+		position: absolute;
+	}
+
+	.bar-overlay {
+		background-color: $bar-overlay--color;
+	}
+}
+
+/* Horizontal bar */
+.horizontal-bar {
+	
+	.bar--wrap {
+		height: $bar--height;
+		left: 0;
+		right: 0;
+	}
+
+	.background-bar {
+		width: 100%;
+		height: inherit;
+		background-image: url(../img/orizontalMask.png);
+	}
+
+	.bar,
+	.bar-overlay {
+		height: inherit;
+	}
+
+	.home-team {
+		
+		.bar,
+		.bar-overlay {
+			right: 0;
+		}
+	}
+
+	.away-team .bar {
+		left: 0;
+	}
+}
+
+/* Vertical bar */
+.vertical-bar {
+
+	.bar--wrap {
+		width: $bar--width;
+		top: 0;
+		bottom: 0;
+	}
+
+	.home-team .bar--wrap {
+		right: 0;
+	}
+
+	.away-team .bar--wrap {
+		left: 0;
+	}
+
+	.background-bar {
+	    width: inherit;
+	    height: 100%;
+	    background-image: $bar--background-image;
+	}
+
+	.bar,
+	.bar-overlay {
+		width: inherit;
+		bottom: 0;
+	}
+}

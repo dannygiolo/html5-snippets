@@ -1,0 +1,194 @@
+/*  =======================================================
+
+		Table of Content
+
+			* Layout
+				- Wrap
+				- Row
+				- Row separator
+				- Home/away rows
+				- Section title
+
+			* Components
+				- Nav
+				- Bar
+				- Heat map
+				
+
+			* Includes
+				- Horizontal graph
+				- Horizontal graph with name/value pairs
+				- Vertical graph
+				- Heat map graph
+				- Circular graph				
+				- Player card graph
+				- Lineup graph
+				
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Layout
+
+	======================================================= */
+
+/* Wrap */
+$wrap--width: 32em;
+
+
+/* Row */
+$row--margin: 2em 0;
+
+
+/* Row separator */
+$row-separator--margin: 0;
+
+
+/* Home/away rows */
+$home-away-team-row--width: 10em;
+$home-away-team-row--margin: 0 1.8em;
+
+
+/* Section title */
+$section-title--margin: 0 0 .8em;
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Components
+
+	======================================================= */
+
+/* Nav */
+$nav--height: 4em;
+$nav-li--width: 32%;
+$nav-li-separator--offset: 20%;
+$nav-li-border--width: 1px;
+$nav-links--padding-bottom: .1em;
+
+/* Bar */
+$bar--width: 1.2em;
+$bar--height: 1.2em;
+
+/* Heat map */
+$heat-map-field--width: 27em; /* Formerly 24em in the PSD */
+$heat-map-field--height: 36em;
+$heat-map-field--border-width: .2em;
+$heat-map-field-lines--width: .1em;
+$heat-map-midfield-circle--radius: 5.5em;
+
+$heat-map-small-penalty-area-width: 5.8em;
+$heat-map-small-penalty-area-height: 1.7em;
+
+$heat-map-player--radius: 1.5em;
+$heat-map-player--font-size: 1.6em;
+
+
+/* Players/stats list */
+$players-stats-list-li--padding: .3em 0;
+
+
+
+
+
+/*  =======================================================
+
+		Includes
+
+	======================================================= */
+
+/* Horizontal graph */
+$horizontal-graph--height: 9em;
+$horizontal-graph--value-width: 1.5em;
+$horizontal-graph-value--top-offset: -.5em;
+$horizontal-graph-value--horizontal-offset: -1.6em;
+$horizontal-graph-value--font-size: 2.5em;
+
+
+/* Horizontal graph with name/value pairs */
+$horizontal-graph-name-value-pairs-li--padding: 1em;
+$horizontal-graph-name-value-pairs-li--margin: 0 1em;
+$horizontal-graph-name-value-pairs-bar--top-offset: 4.2em;
+$horizontal-graph-name-value-pairs-bar--start-offset: 6.2em;
+$horizontal-graph-name-value-pairs-bar--end-offset: 1em;
+
+
+/* Horizontal graph with names */
+$horizontal-graph--names-height: 17.5em;
+$horizontal-graph-player-first-name--top-offset: 2em;
+$horizontal-graph-player-second-name--top-offset: 1.2em;
+
+
+/* Vertical graph */
+$vertical-graph--height: 22em;
+$vertical-graph-home-away-team--height: 15em;
+$vertical-graph-bar-value--horizontal-margin: 2.5em;
+$vertical-graph-bar-value-title--margin: 1em 0;
+
+
+/* Heat map graph */
+$heat-map--padding-bottom: 2em;
+
+$heat-map-numeric-value--width: 2em;
+$heat-map-player-name--max-width: 12em;
+$heat-map-player-name--top-offset: .4em;
+
+
+/* Circular graph */
+$circular-graph--height: 18em;
+$circular-graph-names--height: 23em;
+
+$circular-graph-value-sup--offset: .1em;
+
+$trend-indicator--width: 1.5em;
+$trend-indicator--height: 1em;
+$trend-indicator--top-offset: 4.6em;
+
+$circular-element--radius: 10.6em;
+$circular-element-value--width: 1.2em;
+
+$circular-graph-player-first-name--top-offset: 7.5em;
+$circular-graph-player-second-name--top-offset: 6.2em;
+
+
+/* Player card graph */
+$back-btn--width: 3.2em;
+$back-btn--height: 10.6em;
+$back-btn--margin: 2em;
+$back-btn-icon--height: 5em;
+$back-btn-icon--offset: .8em;
+
+$player-img--radius: 10.6em;
+$player-img--border: .2em;
+$player-img-name--font-size: 2em;
+$player-img-last-event--width: 5em;
+$player-img-last-event--height: 5em;
+$player-img-last-event--margin-bottom: 1em;
+
+$player-details-numeric-value--font-size: 4em;
+$player-details-icon--width: 5em;
+$player-details-icon--height: 5em;
+$player-details-icon--top-offset: .3em;
+
+
+/* Lineup graph */
+$lineup-graph-team-logo--top-offset: 1em;
+$lineup-graph-team-logo--horizontal-margin: 1em;
+$lineup-graph-team-name-margin-bottom: .3em;
+$lineup-graph-players-stats-list-li--height: 7em;
+$lineup-graph-numeric-value--padding-top: .2em;
+$lineup-graph-value-label-padding-top: .2em;
+$lineup-graph-icon-wrap--margin-top: 3.2em;
+$lineup-graph-icon-wrap--horizontal-offset: -.6em;
+$lineup-graph-icon--width: 3em;
+$lineup-graph-icon--height: 3em;

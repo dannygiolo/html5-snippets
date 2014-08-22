@@ -1,0 +1,84 @@
+/*  =======================================================
+	
+		Table of content
+
+			* Starter
+				- New box model
+				- Resetting
+				- Normalizing		
+	  
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Starter
+
+	=======================================================  */
+
+/* New box model */
+/* Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+* {
+	-webkit-box-sizing: inherit;
+	   -moz-box-sizing: inherit;
+			box-sizing: inherit;
+}
+
+/* Resetting */
+/* Feel free to add any other elements you may need */
+/* Source: http://meyerweb.com/eric/tools/css/reset/ */
+html, 
+body, 
+ul, 
+li, 
+ol, 
+fieldset, 
+input, 
+button, 
+figure {
+	margin: 0; 
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+	border: none;
+	background: transparent;
+	font-size: 1em;
+}
+
+button,
+select {
+	cursor: pointer;
+}
+
+
+/* Normalizing */
+a {
+	text-decoration: none;
+}
+
+:focus,
+:active {
+	outline: none; /* Make sure to style those somewhere else */
+}
+
+img {
+	border: none;
+	max-width: 100%;
+}

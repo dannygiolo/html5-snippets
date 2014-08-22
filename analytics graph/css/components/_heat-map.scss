@@ -1,0 +1,280 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Common style
+
+			* Heat map
+				- Field
+				- Penalty areas
+
+			* Team tactic
+
+			* Grid
+
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  ======================================================
+
+		Common style
+
+    ======================================================  */
+
+/* This is used to recreat the field lines for all the elements in the field except the outer border */
+%field-lines {
+	border-width: $heat-map-field-lines--width;
+	border-style: solid;
+	border-color: $heat-map--border-color;
+	z-index: map-get($heat-map--zindex, field-lines);
+}
+
+
+
+
+
+
+/*  ======================================================
+
+		Heat map
+
+    ======================================================  */
+
+.heat-map {
+	padding-bottom: $heat-map--padding-bottom;
+
+	/* Field */
+	.field {
+		box-sizing: content-box;
+		width: $heat-map-field--width;
+		height: $heat-map-field--height;
+		margin: 0 auto;
+		position: relative;
+		border-width: $heat-map-field--border-width;
+
+	}
+
+	.field::before,
+	.field::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+	}
+
+	.field::before {
+		width: 100%;
+		height: $heat-map-field-lines--width;
+	}
+
+	.field::after {
+		width: $heat-map-midfield-circle--radius;
+		height: $heat-map-midfield-circle--radius;
+		left: 50%;
+		margin: (-$heat-map-midfield-circle--radius / 2) 0 0 (-$heat-map-midfield-circle--radius / 2);
+		border-radius: 50%;
+		@extend %field-lines;
+	}
+
+	/* Penalty areas */
+	.field .penalty-area {
+		position: absolute;
+		left: 50%;
+		width: $heat-map-field--width / 2;
+		height: $heat-map-field--height * 15 / 100;
+		margin-left: -(($heat-map-field--width / 4) + ($heat-map-field-lines--width * 2));
+		@extend %field-lines;
+	}
+
+	.field .penalty-area.top-area {
+		top: -.1em;
+	}
+
+	.field .penalty-area.bottom-area {
+		bottom: -.1em;
+	}
+
+	.field .penalty-area::before,
+	.field .penalty-area::after {
+		content: "";
+		position: absolute;
+	}
+
+	.field .penalty-area::before {
+		width: $heat-map-midfield-circle--radius;
+		height: $heat-map-midfield-circle--radius;
+		left: 50%;
+		margin: (-$heat-map-midfield-circle--radius/2) 0 0 (-$heat-map-midfield-circle--radius/2);
+		border-radius: 50%;
+		@extend %field-lines;
+	}
+
+	.field .penalty-area.top-area::before {
+		top: 100%;
+		clip: rect(
+				($heat-map-midfield-circle--radius / 2),
+				($heat-map-midfield-circle--radius + ($heat-map-field-lines--width * 2)),
+				($heat-map-midfield-circle--radius + ($heat-map-field-lines--width * 2)),
+				0);
+	}
+
+	.field .penalty-area.bottom-area::before {
+		clip: rect(
+				0,
+				($heat-map-midfield-circle--radius + ($heat-map-field-lines--width * 2)),
+				($heat-map-midfield-circle--radius / 2),
+				0);
+	}
+
+	.field .penalty-area.top-area::after,
+	.field .penalty-area.bottom-area::after {
+		width: $heat-map-small-penalty-area-width;
+		height: $heat-map-small-penalty-area-height;
+		left: 50%;
+		@extend %field-lines;
+	}
+
+	.field .penalty-area.top-area::after {
+		margin: -.1em 0 0 (-$heat-map-small-penalty-area-width/2);
+	}
+
+	.field .penalty-area.bottom-area::after {
+		bottom: 0;
+		margin: 0 0 -.1em (-$heat-map-small-penalty-area-width/2);
+	}
+
+
+
+
+
+
+/*  ======================================================
+
+		Team tactic
+
+    ======================================================  */
+
+	.team-tactic li {
+		@extend %oswald--400;
+
+		position: absolute;
+		width: $heat-map-player--radius;
+		height: $heat-map-player--radius;
+		margin: (-$heat-map-player--radius / 2) 0 0 (-$heat-map-player--radius / 2);
+		z-index: map-get($heat-map--zindex, player);
+		border-radius: 50%;
+		font-size: $heat-map-player--font-size;
+		line-height: $heat-map-player--font-size;
+		text-align: center;
+
+		/* Faking players positioning */
+		/* To be removed before riccardizing */
+		&:nth-child(1) {
+			top: 5%;
+			left: 50%;
+		}
+
+		&:nth-child(2) {
+			top: 30%;
+			left: 10%;
+		}
+
+		&:nth-child(3) {
+			top: 30%;
+			left: 90%;
+		}
+
+		&:nth-child(4) {
+			top: 50%;
+			left: 35%;
+		}
+
+		&:nth-child(5) {
+			top: 25%;
+			left: 35%;
+		}
+
+		&:nth-child(6) {
+			top: 25%;
+			left: 65%;
+		}
+
+		&:nth-child(7) {
+			top: 60%;
+			left: 10%;
+		}
+
+		&:nth-child(8) {
+			top: 50%;
+			left: 65%;
+		}
+
+		&:nth-child(9) {
+			top: 80%;
+			left: 45%;
+		}
+
+		&:nth-child(10) {
+			top: 70%;
+			left: 55%;
+		}
+
+		&:nth-child(11) {
+			top: 60%;
+			left: 90%;
+		}
+
+		&.active::before {
+			content: "";
+			position: absolute;
+			width: $heat-map-player--radius * 2;
+			height: $heat-map-player--radius * 2;
+			top: -$heat-map-player--radius * 2 / 4;
+			left: -$heat-map-player--radius * 2 / 4;
+			border-radius: 50%;
+		}
+	}
+
+
+
+
+
+
+/*  ======================================================
+
+		Grid
+
+    ======================================================  */
+
+	/* The heat map grid xml is for an horizontal field */
+	/* Our field is vertical */
+	.field-grid {
+		height: $heat-map-field--width;
+		width: $heat-map-field--height;
+		position: absolute;
+		z-index: map-get($heat-map--zindex, heat-map);
+		top: -$heat-map-field--width; /* Setting the proper origin point for transform */
+		border-collapse: collapse;
+		transform-origin: bottom left;
+		transform: rotate(90deg);
+	}
+}
