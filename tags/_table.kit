@@ -1,0 +1,83 @@
+<!-- 
+
+*** Summary
+	HTML snippet for the table element.
+	CSS snippet can be found in the Boilerplate section under 'dev/components/ui/_tables.scss'
+
+*** Sources:
+	- https://css-tricks.com/complete-guide-table-element/
+	- http://webaim.org/techniques/tables/
+
+*** Markup details:
+	- Caption is optional.
+
+	- <thead> indicates that the entire first row of the table contains no data.
+	When you use <thead>, there must be no <tr> that is a direct child of <table>. All rows must be within either the <thead>, <tbody>, or <tfoot>.
+	<tfoot>, like <thead>, is present to indicate these are not data rows but ancillary information.
+	They provide no accessibility functionality and are generally only of use when a long table is printed - the head and/or foot rows will repeat at the top or bottom of each printed page.
+
+	- The scope attribute tells the browser and screen reader that everything within a column that is associated to the header with scope="col" in that column, and that a cell with scope="row" is a header for all cells in that row.
+
+	- All <th> elements should generally always have a scope attribute. While screen readers may correctly guess whether a header is a column header or a row header based on the table layout, assigning a scope makes this unambiguous.
+
+	- Scope will apply even if if the table is complex with multiple levels of headers (such as in spanned cells). The scope of a table header will apply to all cells over which that header spans.
+
+-->
+
+<table>
+	<caption>
+		Table caption
+	</caption>
+
+	<thead>
+		<tr>
+			<th scope="col">
+				Col header 1
+			</th>
+			<th scope="col">
+				Col header 2
+			</th>
+			<th scope="col">
+				Col header 3
+			</th>
+		</tr>
+	</thead>
+
+	<tfoot>
+		<th scope="col">
+			Col header 1
+		</th>
+		<th scope="col">
+			Col header 2
+		</th>
+		<th scope="col">
+			Col header 3
+		</th>
+	</tfoot>
+
+	<tbody>
+		<tr>
+			<th scope="row">
+				Row header 2
+			</th>
+			<td>
+				Value	
+			</td>
+			<td>
+				Value
+			</td>
+		</tr>
+
+		<tr>
+			<th scope="row">
+				Row header 3
+			</th>
+			<td>
+				Value
+			</td>
+			<td>
+				Value
+			</td>
+		</tr>
+	</tbody>
+</table>
